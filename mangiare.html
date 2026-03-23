@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mangiare — Sagra della Campagna 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+        <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><span class="ni">📅</span>Programma</a></li>
+        <li><a href="mangiare.html" class="active"><span class="ni">🍽️</span>Mangiare</a></li>
+        <li><a href="index.html#divertirsi"><span class="ni">🎪</span>Divertirsi</a></li>
+        <li><a href="index.html#ballare"><span class="ni">🎵</span>Ballare</a></li>
+        <li><a href="index.html#chisiamo"><span class="ni">📍</span>Chi siamo</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">📅 Programma</a>
+    <a href="mangiare.html" class="active">🍽️ Mangiare</a>
+    <a href="index.html#divertirsi">🎪 Divertirsi</a>
+    <a href="index.html#ballare">🎵 Ballare</a>
+    <a href="index.html#chisiamo">📍 Chi siamo</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <img class="hero-brand-logo" src="logo-sagra-2025.png" alt="Logo Sagra della Campagna">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">Mangiare</p>
+      <h1>Il menù della<br><em>Sagra</em></h1>
+      <p class="hero-sub">Primi, secondi, contorni, dolci e bevande: tutto il gusto della tradizione.</p>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1200 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,28 C200,56 400,0 600,28 C800,56 1000,0 1200,28 L1200,56 L0,56 Z" fill="#f5f7fc"/>
+    </svg>
+  </div>
+</section>
+
+<section class="food-page">
+  <section class="lunch-cta">
+    <div>
+      <p class="hero-eyebrow">Pranzo a Menù Fisso</p>
+      <h3>Giovedì 30 aprile, Pranzo in Campagna</h3>
+    </div>
+    <a class="day-nav-download lunch-cta-button" href="pranzo-in-campagna.html">Vedi il menù</a>
+  </section>
+
+  <div class="food-menu-shell">
+    <div class="food-menu-top">
+      <div>
+        <p class="hero-eyebrow">Menù</p>
+        <!-- <h3>Tutte le categorie del gusto</h3> -->
+      </div>
+    </div>
+
+    <section class="food-section-block">
+      <div class="food-section-head">
+        <h3>Primi</h3>
+      </div>
+      <div class="food-section-layout">
+        <div class="food-grid">
+          <article class="food-card"><h4>Cappelletti al ragù</h4></article>
+          <article class="food-card"><h4>Cappelletti alla panna (C)</h4></article>
+          <article class="food-card"><h4>Garganelli dl'Azdora (G)</h4></article>
+          <article class="food-card"><h4>Strozzapreti ...dla Pì (S)</h4></article>
+          <article class="food-card"><h4>Tortelloni burro e salvia</h4></article>
+          <article class="food-card highlight"><h4>Tris di minestre (CSG)</h4></article>
+          <article class="food-card"><h4>Polenta al ragù</h4></article>
+        </div>
+        <div class="food-side-image-wrap">
+          <img class="food-side-image" src="menu-1.png" alt="Primi piatti della Sagra della Campagna">
+        </div>
+      </div>
+    </section>
+
+    <section class="food-section-block">
+      <div class="food-section-head">
+        <h3>Secondi</h3>
+      </div>
+      <div class="food-section-layout reverse">
+        <div class="food-grid">
+          <article class="food-card"><h4>Bruschetta semplice</h4></article>
+          <article class="food-card"><h4>Bruschetta con prosciutto</h4></article>
+          <article class="food-card"><h4>Piadina sulla lastra semplice</h4></article>
+          <article class="food-card"><h4>Piadina con prosciutto o salsiccia</h4></article>
+          <article class="food-card"><h4>Agnello fritto Dorato</h4></article>
+          <article class="food-card"><h4>Arrosticini con patatine</h4></article>
+          <article class="food-card"><h4>Braciola di castrato</h4></article>
+          <article class="food-card"><h4>Coscia di pollo</h4></article>
+          <article class="food-card"><h4>Salsiccia</h4></article>
+          <article class="food-card highlight"><h4>BIS di carne</h4><p class="food-note">Salsiccia, coscia di pollo</p></article>
+          <article class="food-card highlight"><h4>TRIS di carne</h4><p class="food-note">Castrato, salsiccia, coscia di pollo</p></article>
+          <article class="food-card"><h4>Olive Romagnole Farcite “alla Friz”</h4></article>
+        </div>
+        <div class="food-side-image-wrap">
+          <img class="food-side-image" src="menu-2.png" alt="Secondi piatti della Sagra della Campagna">
+        </div>
+      </div>
+    </section>
+
+    <section class="food-section-block">
+      <div class="food-section-head">
+        <h3>Contorni</h3>
+      </div>
+      <div class="food-grid compact">
+        <article class="food-card"><h4>PANE</h4></article>
+        <article class="food-card"><h4>Insalata mista</h4></article>
+        <article class="food-card"><h4>Patate fritte</h4></article>
+        <article class="food-card"><h4>Pomodori in gratè</h4></article>
+      </div>
+    </section>
+
+    <section class="food-section-block">
+      <div class="food-section-head">
+        <h3>Dolci</h3>
+      </div>
+      <div class="food-section-layout">
+        <div class="food-grid compact">
+          <article class="food-card"><h4>Crema (zabaione e cioccolato)</h4></article>
+          <article class="food-card"><h4>Latte brulè</h4></article>
+          <article class="food-card highlight"><h4>Torta di frutta</h4></article>
+          <article class="food-card"><h4>Sorbetto al limone</h4></article>
+          <article class="food-card"><h4>Sorbetto al caffè</h4></article>
+        </div>
+        <div class="food-side-image-wrap">
+          <img class="food-side-image" src="menu-3.png" alt="Dolci della Sagra della Campagna">
+        </div>
+      </div>
+    </section>
+
+    <section class="food-section-block">
+      <div class="food-section-head">
+        <h3>Bevande</h3>
+      </div>
+      <div class="food-grid compact">
+        <article class="food-card"><h4>Acqua</h4></article>
+        <article class="food-card"><h4>Coca Cola spina e lattina</h4></article>
+        <article class="food-card"><h4>Fanta in lattina</h4></article>
+        <article class="food-card"><h4>Birra alla spina e in lattina</h4></article>
+        <article class="food-card highlight"><h4>Vino sfuso rosso, bianco e frizzante</h4></article>
+      </div>
+    </section>
+  </div>
+</section>
+
+<footer>
+  <img class="footer-main-logo" src="logo-sagra-2025.png" alt="Logo Sagra della Campagna">
+  <strong>66ª Sagra della Campagna</strong> &middot; Pieve Cesato (RA)<br>
+  <span style="font-size:0.7rem;opacity:0.45;display:block;margin-top:0.35rem">Orari e programma possono subire variazioni &middot; &copy; 2026 Pro Loco Pieve Cesato</span>
+  <div class="footer-partners">
+    <div class="footer-partner-card">
+      <img src="logo-feste-sagre-scuola.png" alt="Comitato Feste e Sagre per la Scuola">
+    </div>
+    <div class="footer-partner-card usgb">
+      <img src="logo-usgb.png" alt="USGB Pieve Cesato">
+    </div>
+    <div class="footer-partner-card">
+      <img src="logo-feste-sagre-2024.png" alt="Logo Feste e Sagre">
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

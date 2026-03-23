@@ -19,7 +19,7 @@
     <nav>
       <ul class="nav-links" id="navLinks">
         <li><a data-page="programma" class="active" onclick="showPage('programma')"><span class="ni">📅</span>Programma</a></li>
-        <li><a data-page="mangiare"   onclick="showPage('mangiare')"><span class="ni">🍽️</span>Mangiare</a></li>
+        <li><a href="mangiare.html"><span class="ni">🍽️</span>Mangiare</a></li>
         <li><a data-page="divertirsi" onclick="showPage('divertirsi')"><span class="ni">🎪</span>Divertirsi</a></li>
         <li><a data-page="ballare"    onclick="showPage('ballare')"><span class="ni">🎵</span>Ballare</a></li>
         <li><a data-page="chisiamo"   onclick="showPage('chisiamo')"><span class="ni">📍</span>Chi siamo</a></li>
@@ -31,7 +31,7 @@
   </div>
   <nav class="mobile-nav" id="mobileNav">
     <a data-page="programma" class="active" onclick="showPage('programma');toggleMobile()">📅 Programma</a>
-    <a data-page="mangiare"   onclick="showPage('mangiare');toggleMobile()">🍽️ Mangiare</a>
+    <a href="mangiare.html">🍽️ Mangiare</a>
     <a data-page="divertirsi" onclick="showPage('divertirsi');toggleMobile()">🎪 Divertirsi</a>
     <a data-page="ballare"    onclick="showPage('ballare');toggleMobile()">🎵 Ballare</a>
     <a data-page="chisiamo"   onclick="showPage('chisiamo');toggleMobile()">📍 Chi siamo</a>
@@ -73,14 +73,99 @@
 
 <!-- PAGE: MANGIARE -->
 <div class="page" id="page-mangiare">
-  <div class="placeholder-wrap">
-    <div class="ph-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#054A9C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6h3.5a1.5 1.5 0 0 1 0 3H19l-1 9"/></svg>
+  <section class="food-page">
+    <div class="food-hero">
+      <div class="food-hero-copy">
+        <p class="hero-eyebrow">Mangiare</p>
+        <h2>Il gusto della Sagra, tra tradizione romagnola e piatti da condividere.</h2>
+        <p>
+          Dalle minestre fatte come una volta alla griglia, dalla piadina ai dolci: il menù della Sagra della Campagna
+          è pensato per far venire voglia di fermarsi, scegliere con calma e tornare più di una volta.
+        </p>
+      </div>
+      <div class="food-gallery">
+        <img class="food-gallery-main" src="menu-1.png" alt="Primo piatto della Sagra della Campagna" />
+        <div class="food-gallery-side">
+          <img src="menu-2.png" alt="Tagliere e piadina della Sagra della Campagna" />
+          <img src="menu-3.png" alt="Torta di frutta della Sagra della Campagna" />
+        </div>
+      </div>
     </div>
-    <h2>Mangiare</h2>
-    <p>Menù, pranzo in campagna, strozzapreti, la Romagna in tavola e la cantina dei vini. Tutto il gusto autentico della cucina romagnola.</p>
-    <span class="cs-tag">Pagina in arrivo</span>
-  </div>
+
+    <div class="food-menu-shell">
+      <div class="food-menu-top">
+        <div>
+          <p class="hero-eyebrow">Menù</p>
+          <h3>Esplora le categorie</h3>
+        </div>
+        <div class="food-category-nav" id="foodCategoryNav">
+          <button class="food-category-btn active" data-food-category="primi">Primi</button>
+          <button class="food-category-btn" data-food-category="secondi">Secondi</button>
+          <button class="food-category-btn" data-food-category="contorni">Contorni</button>
+          <button class="food-category-btn" data-food-category="dolci">Dolci</button>
+          <button class="food-category-btn" data-food-category="bevande">Bevande</button>
+        </div>
+      </div>
+
+      <div class="food-category-panel active" id="food-panel-primi">
+        <div class="food-grid">
+          <article class="food-card"><h4>Cappelletti al ragù</h4></article>
+          <article class="food-card"><h4>Cappelletti alla panna</h4><p class="food-note">Sigla menù: C</p></article>
+          <article class="food-card"><h4>Garganelli dl'Azdora</h4><p class="food-note">Sigla menù: G</p></article>
+          <article class="food-card"><h4>Strozzapreti ...dla Pì</h4><p class="food-note">Sigla menù: S</p></article>
+          <article class="food-card"><h4>Tortelloni burro e salvia</h4></article>
+          <article class="food-card highlight"><h4>Tris di minestre</h4><p class="food-note">Sigla menù: CSG</p></article>
+          <article class="food-card"><h4>Polenta al ragù</h4></article>
+        </div>
+      </div>
+
+      <div class="food-category-panel" id="food-panel-secondi">
+        <div class="food-grid">
+          <article class="food-card"><h4>Bruschetta semplice</h4></article>
+          <article class="food-card"><h4>Bruschetta con prosciutto</h4></article>
+          <article class="food-card"><h4>Piadina sulla lastra semplice</h4></article>
+          <article class="food-card"><h4>Piadina con prosciutto o salsiccia</h4></article>
+          <article class="food-card"><h4>Agnello fritto Dorato</h4></article>
+          <article class="food-card"><h4>Arrosticini con patatine</h4></article>
+          <article class="food-card"><h4>Braciola di castrato</h4></article>
+          <article class="food-card"><h4>Coscia di pollo</h4></article>
+          <article class="food-card"><h4>Salsiccia</h4></article>
+          <article class="food-card highlight"><h4>BIS di carne</h4><p class="food-note">Salsiccia, coscia di pollo</p></article>
+          <article class="food-card highlight"><h4>TRIS di carne</h4><p class="food-note">Castrato, salsiccia, coscia di pollo</p></article>
+          <article class="food-card"><h4>Olive Romagnole Farcite “alla Friz”</h4></article>
+        </div>
+      </div>
+
+      <div class="food-category-panel" id="food-panel-contorni">
+        <div class="food-grid compact">
+          <article class="food-card"><h4>Pane</h4></article>
+          <article class="food-card"><h4>Insalata mista</h4></article>
+          <article class="food-card"><h4>Patate fritte</h4></article>
+          <article class="food-card"><h4>Pomodori in gratè</h4></article>
+        </div>
+      </div>
+
+      <div class="food-category-panel" id="food-panel-dolci">
+        <div class="food-grid compact">
+          <article class="food-card"><h4>Crema</h4><p class="food-note">Zabaione e cioccolato</p></article>
+          <article class="food-card"><h4>Latte brulè</h4></article>
+          <article class="food-card highlight"><h4>Torta di frutta</h4></article>
+          <article class="food-card"><h4>Sorbetto al limone</h4></article>
+          <article class="food-card"><h4>Sorbetto al caffè</h4></article>
+        </div>
+      </div>
+
+      <div class="food-category-panel" id="food-panel-bevande">
+        <div class="food-grid compact">
+          <article class="food-card"><h4>Acqua</h4></article>
+          <article class="food-card"><h4>Coca Cola</h4><p class="food-note">Spina e lattina</p></article>
+          <article class="food-card"><h4>Fanta</h4><p class="food-note">In lattina</p></article>
+          <article class="food-card"><h4>Birra</h4><p class="food-note">Alla spina e in lattina</p></article>
+          <article class="food-card highlight"><h4>Vino sfuso</h4><p class="food-note">Rosso, bianco e frizzante</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 
 <!-- PAGE: DIVERTIRSI -->
@@ -139,4 +224,6 @@
 
 <script src="script.js"></script>
 </body>
+</html>
+/body>
 </html>

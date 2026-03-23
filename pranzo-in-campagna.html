@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pranzo in Campagna — Sagra della Campagna 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><span class="ni">📅</span>Programma</a></li>
+        <li><a href="mangiare.html" class="active"><span class="ni">🍽️</span>Mangiare</a></li>
+        <li><a href="index.html#divertirsi"><span class="ni">🎪</span>Divertirsi</a></li>
+        <li><a href="index.html#ballare"><span class="ni">🎵</span>Ballare</a></li>
+        <li><a href="index.html#chisiamo"><span class="ni">📍</span>Chi siamo</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">📅 Programma</a>
+    <a href="mangiare.html" class="active">🍽️ Mangiare</a>
+    <a href="index.html#divertirsi">🎪 Divertirsi</a>
+    <a href="index.html#ballare">🎵 Ballare</a>
+    <a href="index.html#chisiamo">📍 Chi siamo</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <img class="hero-brand-logo" src="logo-sagra-2025.png" alt="Logo Sagra della Campagna">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">Pranzo in Campagna</p>
+      <h1>Giovedì 30 aprile<br><em>a tavola insieme</em></h1>
+      <p class="hero-sub">Un momento conviviale dentro la Sagra, con un menù fisso pensato per gustare i sapori della tradizione romagnola.</p>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1200 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,28 C200,56 400,0 600,28 C800,56 1000,0 1200,28 L1200,56 L0,56 Z" fill="#f5f7fc"/>
+    </svg>
+  </div>
+</section>
+
+<section class="food-page lunch-page">
+  <div class="lunch-intro-shell">
+    <div class="lunch-intro-copy">
+      <p class="hero-eyebrow">Informazioni</p>
+      <h2>Un pranzo speciale nell'ambito della Sagra della Campagna</h2>
+      <p>
+        Nell'ambito della <strong>66ª edizione della Sagra della Campagna</strong>, in programma a Pieve Cesato nei
+        giorni <strong>29 e 30 aprile, 1, 2, e 3 maggio 2026</strong>, torna anche il momento dedicato al
+        <strong>Pranzo in Campagna</strong>.
+      </p>
+      <p>
+        L'iniziativa nasce per offrire un'occasione di ritrovo a chi desidera gustare i piatti della tradizione
+        popolare romagnola anche a pranzo, in un clima semplice, conviviale e ben organizzato.
+      </p>
+      <p>
+        Grazie alla disponibilità delle cuoche e dei camerieri della Sagra, le cucine e gli stand gastronomici
+        coperti saranno attivi <strong>a partire dalle ore 12:00 di giovedì 30 aprile 2026</strong>.
+      </p>
+    </div>
+    <div class="lunch-intro-side">
+      <img src="pranzo-logo.jpg" alt="Logo Pranzo in Campagna" class="lunch-side-image">
+    </div>
+  </div>
+
+  <div class="lunch-info-grid">
+    <article class="food-menu-shell lunch-info-card">
+      <h3>Prenotazione</h3>
+      <p>
+        Per rendere il servizio ai tavoli più efficiente e celere, saranno accettate <strong>solo le prenotazioni
+        effettuate entro le ore 21:00 del giorno antecedente (mercoledì 29 aprile)</strong>.
+      </p>
+      <p>
+        Per adesioni, variazioni o dubbi organizzativi è possibile contattare l'incaricato della Sagra al numero
+        indicato nella comunicazione originale:
+        <strong>338 2333669</strong>.
+      </p>
+    </article>
+
+    <article class="food-menu-shell lunch-info-card highlight-card">
+      <h3>Menù fisso</h3>
+      <p>
+        Per il pranzo è stato scelto un <strong>menù fisso per tutti gli intervenuti</strong>, così da garantire una
+        gestione più ordinata del servizio e permettere a tutti di vivere al meglio il momento conviviale.
+      </p>
+      <p>
+        In fondo alla pagina trovi il menù completo, ripensato in modo chiaro e interattivo.
+      </p>
+    </article>
+  </div>
+
+  <div class="food-menu-shell lunch-menu-shell">
+    <div class="food-menu-top">
+      <div>
+        <p class="hero-eyebrow">Menù del pranzo</p>
+        <h3>Giovedì 30 aprile 2026</h3>
+      </div>
+    </div>
+
+    <div class="lunch-menu-layout">
+      <div class="lunch-menu-grid">
+        <article class="food-card highlight"><h4>Bis di minestre</h4><p class="food-note">Strozzapreti + cappelletti al ragù</p></article>
+        <article class="food-card highlight"><h4>Bis di carne</h4><p class="food-note">Coscia di pollo + salsiccia</p></article>
+        <article class="food-card"><h4>Contorno</h4><p class="food-note">Patate fritte</p></article>
+        <article class="food-card"><h4>Dolce a scelta</h4><p class="food-note">Torta di frutta, crema oppure sorbetto</p></article>
+        <article class="food-card"><h4>Inclusi</h4><p class="food-note">Acqua, vino e caffè</p></article>
+        <article class="food-card highlight"><h4>Prezzo menù</h4><p class="food-note">Totale € 18,00</p></article>
+        <article class="food-card"><h4>Variante secondo</h4><p class="food-note">Braciola di castrato su richiesta</p></article>
+        <article class="food-card"><h4>Prezzo con castrato</h4><p class="food-note">Totale € 20,00</p></article>
+      </div>
+      <div class="lunch-menu-side">
+        <img src="pranzo-menu.png" alt="Menù Pranzo in Campagna" class="food-side-image lunch-menu-image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img class="footer-main-logo" src="logo-sagra-2025.png" alt="Logo Sagra della Campagna">
+  <strong>66ª Sagra della Campagna</strong> &middot; Pieve Cesato (RA)<br>
+  <span style="font-size:0.7rem;opacity:0.45;display:block;margin-top:0.35rem">Orari e programma possono subire variazioni &middot; &copy; 2026 Pro Loco Pieve Cesato</span>
+  <div class="footer-partners">
+    <div class="footer-partner-card">
+      <img src="logo-feste-sagre-scuola.png" alt="Comitato Feste e Sagre per la Scuola">
+    </div>
+    <div class="footer-partner-card usgb">
+      <img src="logo-usgb.png" alt="USGB Pieve Cesato">
+    </div>
+    <div class="footer-partner-card">
+      <img src="logo-feste-sagre-2024.png" alt="Logo Feste e Sagre">
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

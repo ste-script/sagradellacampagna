@@ -150,11 +150,28 @@ function triggerCards() {
 
 /* ── PAGE SWITCH ── */
 function showPage(id) {
+  const target = document.getElementById('page-' + id);
+  if (!target) return;
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + id).classList.add('active');
+  target.classList.add('active');
   document.querySelectorAll('[data-page]').forEach(a => a.classList.toggle('active', a.dataset.page === id));
   window.scrollTo({ top: 0, behavior:'smooth' });
   if (id === 'programma') setTimeout(triggerCards, 120);
+}
+
+/* ── FOOD MENU TABS ── */
+function initFoodTabs() {
+  const buttons = document.querySelectorAll('.food-category-btn');
+  const panels = document.querySelectorAll('.food-category-panel');
+  if (!buttons.length || !panels.length) return;
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const category = button.getAttribute('data-food-category');
+      buttons.forEach((b) => b.classList.toggle('active', b === button));
+      panels.forEach((panel) => panel.classList.toggle('active', panel.id === `food-panel-${category}`));
+    });
+  });
 }
 
 /* ── MOBILE NAV ── */
@@ -195,4 +212,5 @@ function startCountdown() {
 
 /* ── INIT ── */
 setTimeout(triggerCards, 250);
+initFoodTabs();
 startCountdown();
