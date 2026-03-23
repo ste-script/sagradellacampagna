@@ -19,10 +19,8 @@
     <nav>
       <ul class="nav-links" id="navLinks">
         <li><a data-page="programma" class="active" onclick="showPage('programma')"><span class="ni">📅</span>Programma</a></li>
-        <li><a data-page="mangiare"   onclick="showPage('mangiare')"><span class="ni">🍽️</span>Mangiare</a></li>
-        <li><a data-page="divertirsi" onclick="showPage('divertirsi')"><span class="ni">🎪</span>Divertirsi</a></li>
-        <li><a data-page="ballare"    onclick="showPage('ballare')"><span class="ni">🎵</span>Ballare</a></li>
-        <li><a data-page="chisiamo"   onclick="showPage('chisiamo')"><span class="ni">📍</span>Chi siamo</a></li>
+        <li><a href="mangiare.html"><span class="ni">🍽️</span>Mangiare</a></li>
+        <li><a href="index.html#dove-siamo"><span class="ni">📍</span>Dove Siamo</a></li>
       </ul>
     </nav>
     <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobile()">
@@ -31,10 +29,8 @@
   </div>
   <nav class="mobile-nav" id="mobileNav">
     <a data-page="programma" class="active" onclick="showPage('programma');toggleMobile()">📅 Programma</a>
-    <a data-page="mangiare"   onclick="showPage('mangiare');toggleMobile()">🍽️ Mangiare</a>
-    <a data-page="divertirsi" onclick="showPage('divertirsi');toggleMobile()">🎪 Divertirsi</a>
-    <a data-page="ballare"    onclick="showPage('ballare');toggleMobile()">🎵 Ballare</a>
-    <a data-page="chisiamo"   onclick="showPage('chisiamo');toggleMobile()">📍 Chi siamo</a>
+    <a href="mangiare.html">🍽️ Mangiare</a>
+            <a href="index.html#dove-siamo">📍 Dove Siamo</a>
   </nav>
 </header>
 
@@ -42,7 +38,7 @@
 <div class="page active" id="page-programma">
   <section class="hero">
     <div class="hero-inner">
-      <img class="hero-brand-logo" src="logo-sagra-2025.png" alt="Logo Sagra della Campagna">
+      <a href="index.html"><img class="hero-brand-logo" src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna"></a>
       <div class="hero-copy">
         <p class="hero-eyebrow">Pieve Cesato &middot; 66ª Edizione</p>
         <h1>Sagra della<br><em>Campagna</em></h1>
@@ -63,80 +59,66 @@
   <main id="panels"></main>
   <div class="program-download-wrap">
     <div class="program-download-inner">
-      <a class="day-nav-download" href="programma-sagra.pdf" download>
+      <a class="day-nav-download" href="assets/pdfs/programma-sagra.pdf" download>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
         <span>Scarica il Programma</span>
       </a>
     </div>
   </div>
-</div>
-
-<!-- PAGE: MANGIARE -->
-<div class="page" id="page-mangiare">
-  <div class="placeholder-wrap">
-    <div class="ph-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#054A9C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6h3.5a1.5 1.5 0 0 1 0 3H19l-1 9"/></svg>
+  <section id="dove-siamo" class="location-section">
+    <div class="location-inner">
+      <div class="location-head">
+        <p class="hero-eyebrow">Dove siamo</p>
+        <h2>Informazioni utili per raggiungerci e seguirci</h2>
+      </div>
+      <div class="location-cards">
+        <article class="location-card">
+          <img src="assets/images/parcheggio.png" alt="Parcheggio" class="location-card-image" />
+          <p>Ampi Parcheggi!</p>
+        </article>
+        <article class="location-card">
+          <img src="assets/images/satispay.png" alt="Satispay" class="location-card-image" />
+          <p>Da noi puoi pagare con Satispay!</p>
+        </article>
+        <article class="location-card social-card">
+          <div class="social-icons-row">
+            <a href="https://www.instagram.com/sagradellacampagna?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram Sagra della Campagna" class="social-icon-link instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"></circle></svg>
+            </a>
+            <a href="https://www.facebook.com/SagraDellaCampagnaPieveCesato" target="_blank" rel="noopener noreferrer" aria-label="Facebook Sagra della Campagna" class="social-icon-link facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.6.4-1 1-1Z" fill="currentColor"></path></svg>
+            </a>
+          </div>
+          <p>Seguici sui social!</p>
+        </article>
+      </div>
+      <div class="location-map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d383.6404089510943!2d11.957464424478067!3d44.33698109990894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132b53702c76829b%3A0x5426ab70c65721d9!2sSagra%20della%20Campagna%20-%20Pieve%20Cesato!5e0!3m2!1sit!2sit!4v1774301730678!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="location-map"></iframe>
+      </div>
     </div>
-    <h2>Mangiare</h2>
-    <p>Menù, pranzo in campagna, strozzapreti, la Romagna in tavola e la cantina dei vini. Tutto il gusto autentico della cucina romagnola.</p>
-    <span class="cs-tag">Pagina in arrivo</span>
-  </div>
-</div>
-
-<!-- PAGE: DIVERTIRSI -->
-<div class="page" id="page-divertirsi">
-  <div class="placeholder-wrap">
-    <div class="ph-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#054A9C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-    </div>
-    <h2>Divertirsi</h2>
-    <p>Corsa dei Somari, Torneo di Barandell, Hobby Horses, Festa della Luce, animazioni per bambini e molto altro.</p>
-    <span class="cs-tag">Pagina in arrivo</span>
-  </div>
-</div>
-
-<!-- PAGE: BALLARE -->
-<div class="page" id="page-ballare">
-  <div class="placeholder-wrap">
-    <div class="ph-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#054A9C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-    </div>
-    <h2>Ballare</h2>
-    <p>Concerti, liscio, DJ set e grandi spettacoli dal vivo. Tutta la musica e la danza della Sagra della Campagna 2026.</p>
-    <span class="cs-tag">Pagina in arrivo</span>
-  </div>
-</div>
-
-<!-- PAGE: CHI SIAMO -->
-<div class="page" id="page-chisiamo">
-  <div class="placeholder-wrap">
-    <div class="ph-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#054A9C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-    </div>
-    <h2>Chi siamo</h2>
-    <p>La nostra storia, dove siamo, come raggiungerci e informazioni sulla Parrocchia di Pieve Cesato.</p>
-    <span class="cs-tag">Pagina in arrivo</span>
-  </div>
+  </section>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <img class="footer-main-logo" src="logo-sagra-2025.png" alt="Logo Sagra della Campagna">
+  <img class="footer-main-logo" src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna">
   <strong>66ª Sagra della Campagna</strong> &middot; Pieve Cesato (RA)<br>
   <span style="font-size:0.7rem;opacity:0.45;display:block;margin-top:0.35rem">Orari e programma possono subire variazioni &middot; &copy; 2026 Pro Loco Pieve Cesato</span>
   <div class="footer-partners">
     <div class="footer-partner-card">
-      <img src="logo-feste-sagre-scuola.png" alt="Comitato Feste e Sagre per la Scuola">
+      <img src="assets/images/logo-feste-sagre-scuola.png" alt="Comitato Feste e Sagre per la Scuola">
     </div>
     <div class="footer-partner-card usgb">
-      <img src="logo-usgb.png" alt="USGB Pieve Cesato">
+      <img src="assets/images/logo-usgb.png" alt="USGB Pieve Cesato">
     </div>
     <div class="footer-partner-card">
-      <img src="logo-feste-sagre-2024.png" alt="Logo Feste e Sagre">
+      <img src="assets/images/logo-feste-sagre-2024.png" alt="Logo Feste e Sagre">
     </div>
   </div>
 </footer>
 
 <script src="script.js"></script>
 </body>
+</html>
+/body>
 </html>
