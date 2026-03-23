@@ -25,8 +25,8 @@ const DAYS = [
   ]},
   { id:"gio30", short:"Gio", num:"30", month:"Aprile", fullName:"Giovedì 30 Aprile", events:[
     {time:"12.00", icon:"food", title:"PRANZO in CAMPAGNA", desc:"Pranzo a menù fisso · per info e prenotazioni: 338 2333669", type:"highlight"},
-    {time:"17.30", icon:"run", title:"Apertura iscrizioni 35ª PODISTICA DELLA CAMPAGNA"},
-    {time:"19.00", icon:"run", title:"PARTENZA della Camminata Ludicomotoria (10 km) o Mini camminata (2 km)", desc:"Contributo organizzativo: € 3,00 · Premio di partecipazione a tutti gli iscritti"},
+    {time:"17.30", icon:"run", title:"Apertura iscrizioni 35ª PODISTICA DELLA CAMPAGNA", nota:"Contributo organizzativo: € 3,00 · Premio di partecipazione a tutti gli iscritti"},
+    {time:"19.00", icon:"run", title:"PARTENZA della Camminata Ludicomotoria (10 km) o Mini camminata (2 km)"},
     {time:"19.00", icon:"food", title:"Apertura stand gastronomico", type:"food"},
     {time:"20.00", icon:"trophy", title:"Premiazioni a tutte le Società partecipanti", subtitle:"(con minimo 10 partecipanti)"},
     {time:"20.30", icon:"music", title:"Concerto di DANIELA PERONI QUARTET"},
@@ -63,7 +63,7 @@ const DAYS = [
     {time:"Pomeriggio", icon:"kids", title:"BUSKERS, ANIMAZIONI, GIOCOLERIA, TRUCCABIMBI — LAURA e i giochi di NONNO BANTER"},
     {time:"14.30", icon:"horse", title:"HOBBY HORSES — 3° raduno degli ASINI con bastone", desc:"Con GARA di Asini a Bastone e carota e altre novità (ideazione artistica a cura di Luigi Berardi)"},
     {time:"15.00", icon:"games", title:"GIOCHI DELLA TRADIZIONE POPOLARE ROMAGNOLA — 32° TORNEO DI BARANDELL"},
-    {time:"15.30", icon:"church", title:"Visita guidata alla Chiesa Arcipretale di Pieve Cesato", nota:"Guidata dall'Arciprete Don Claudio"},
+    {time:"15.30", icon:"church", title:"Visita guidata alla Chiesa Arcipretale di Pieve Cesato", subtitle:"Guidata dall'Arciprete Don Claudio"},
     {time:"16.00", icon:"games", title:"Giochi a premi (area green) — GIMKANA COL TOSAERBA (gara a coppie)"},
     {time:"17.30", icon:"kids", title:"CARLETTO E L'UOVO D'ORO — ALL'INCIRCO", subtitle:"Spettacolo di Burattini in baracca · Angolo dei Bambini", type:"highlight"},
     {time:"18.00", icon:"food", title:"Apertura stand gastronomico", type:"food"},
@@ -86,19 +86,22 @@ function buildNav() {
 function buildPanels() {
   const wrap = document.getElementById('panels');
   if (!wrap) return;
-  DAYS.forEach((d, di) => {
+  DAYS.forEach((d) => {
     const panel = document.createElement('div');
-    panel.className = 'day-panel' + (di === 0 ? ' active' : '');
+    panel.className = 'day-panel';
     panel.id = 'panel-' + d.id;
     panel.innerHTML = `<div class="day-heading"><div class="day-heading-dot"></div><h2>${d.fullName}</h2><div class="day-heading-line"></div></div>`;
     const tl = document.createElement('div');
     tl.className = 'timeline';
-    d.events.forEach(ev => {
-      const hl = ev.type === 'highlight', fd = ev.type === 'food';
+    d.events.forEach((ev, idx) => {
+      const fd = ev.type === 'food';
       const card = document.createElement('div');
-      card.className = 'event-card' + (hl ? ' highlight' : '') + (fd ? ' food' : '');
+      card.className = 'event-card' + (fd ? ' food' : '');
+      card.dataset.day = d.id;
+      card.dataset.index = String(idx);
+      card.dataset.time = ev.time;
       let html = `<div class="event-dot"></div><div class="card-inner"><div class="card-bar"></div><div class="card-icon-wrap"><div class="card-icon">${IC[ev.icon] || IC.star}</div></div><div class="card-body">`;
-      if (hl) html += `<div class="card-badge">★ In evidenza</div>`;
+      html += `<div class="card-badge schedule-badge">Prossimo</div>`;
       html += `<div class="card-time">${ev.time}</div><div class="card-title">${ev.title}</div>`;
       if (ev.subtitle) html += `<div class="card-subtitle">${ev.subtitle}</div>`;
       if (ev.desc) html += `<div class="card-desc">${ev.desc}</div>`;
@@ -111,17 +114,21 @@ function buildPanels() {
     wrap.appendChild(panel);
   });
 }
-function switchDay(id, btn) {
+function switchDay(id, btn, scrollToPanels = true) {
   document.querySelectorAll('.day-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
   const panel = document.getElementById('panel-' + id);
   if (panel) panel.classList.add('active');
-  btn.classList.add('active');
-  btn.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
-  const panels = document.getElementById('panels');
-  if (panels) {
-    const y = panels.getBoundingClientRect().top + window.scrollY - 135;
-    window.scrollTo({ top: y, behavior:'smooth' });
+  if (btn) {
+    btn.classList.add('active');
+    btn.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
+  }
+  if (scrollToPanels) {
+    const panels = document.getElementById('panels');
+    if (panels) {
+      const y = panels.getBoundingClientRect().top + window.scrollY - 135;
+      window.scrollTo({ top: y, behavior:'smooth' });
+    }
   }
   setTimeout(triggerCards, 60);
 }
@@ -131,6 +138,58 @@ function triggerCards() {
   active.querySelectorAll('.event-card').forEach((c, i) => {
     c.classList.remove('visible');
     setTimeout(() => c.classList.add('visible'), i * 50);
+  });
+}
+function parseTimeToMinutes(value) {
+  const m = /^(\d{1,2})\.(\d{2})$/.exec(value || '');
+  if (!m) return null;
+  return Number(m[1]) * 60 + Number(m[2]);
+}
+function getRomeNow() {
+  const fmt = new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Europe/Rome', year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', hour12: false
+  });
+  const parts = Object.fromEntries(fmt.formatToParts(new Date()).filter(p => p.type !== 'literal').map(p => [p.type, p.value]));
+  return {
+    year: Number(parts.year),
+    month: Number(parts.month),
+    day: Number(parts.day),
+    minutes: Number(parts.hour) * 60 + Number(parts.minute)
+  };
+}
+function getScheduleState() {
+  const now = getRomeNow();
+  const dayMap = [
+    { id: 'mer29', month: 4, day: 29 },
+    { id: 'gio30', month: 4, day: 30 },
+    { id: 'ven1', month: 5, day: 1 },
+    { id: 'sab2', month: 5, day: 2 },
+    { id: 'dom3', month: 5, day: 3 }
+  ];
+  const currentIndex = dayMap.findIndex(d => d.month === now.month && d.day === now.day);
+  if (currentIndex === -1) {
+    const first = dayMap[0];
+    const last = dayMap[dayMap.length - 1];
+    const beforeStart = (now.month < first.month) || (now.month === first.month && now.day < first.day);
+    return { activeDayId: beforeStart ? first.id : last.id, highlightIndexes: beforeStart ? [0] : [] };
+  }
+  const day = DAYS.find(d => d.id === dayMap[currentIndex].id);
+  const timed = day.events
+    .map((ev, idx) => ({ idx, minutes: parseTimeToMinutes(ev.time) }))
+    .filter(ev => ev.minutes !== null)
+    .sort((a, b) => a.minutes - b.minutes);
+  const next = timed.find(ev => ev.minutes >= now.minutes);
+  if (!next) return { activeDayId: day.id, highlightIndexes: [] };
+  const sameTime = timed.filter(ev => ev.minutes === next.minutes).map(ev => ev.idx);
+  return { activeDayId: day.id, highlightIndexes: sameTime };
+}
+function applyScheduleHighlights(state) {
+  document.querySelectorAll('.event-card').forEach(card => card.classList.remove('highlight'));
+  if (!state || !state.activeDayId) return;
+  state.highlightIndexes.forEach(idx => {
+    const card = document.querySelector(`.event-card[data-day="${state.activeDayId}"][data-index="${idx}"]`);
+    if (card) card.classList.add('highlight');
   });
 }
 function showPage(id) {
@@ -155,7 +214,7 @@ function startCountdown() {
   const target = new Date('2026-04-29T19:00:00+02:00').getTime();
   function render() {
     const diff = target - Date.now();
-    if (diff <= 0) { valueEl.textContent = 'La Sagra è iniziata'; return; }
+    if (diff <= 0) { valueEl.textContent = 'La Sagra è iniziata!'; return; }
     const total = Math.floor(diff / 1000);
     const d = Math.floor(total / 86400);
     const h = Math.floor((total % 86400) / 3600);
@@ -169,6 +228,10 @@ function startCountdown() {
 document.addEventListener('DOMContentLoaded', () => {
   buildNav();
   buildPanels();
+  const state = getScheduleState();
+  const activeBtn = document.querySelector(`.day-btn[data-id="${state.activeDayId}"]`);
+  switchDay(state.activeDayId, activeBtn, false);
+  applyScheduleHighlights(state);
   setTimeout(triggerCards, 250);
   startCountdown();
 });
