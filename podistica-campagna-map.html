@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Podistica della Campagna — 10 km · Pieve Cesato</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="icon" type="image/png" href="assets/images/logo-sagra-2025.png"/>
 
@@ -36,44 +37,6 @@
     a     { text-decoration: none; }
     img   { max-width: 100%; }
 
-    /* TOPBAR */
-    .topbar { background: var(--blue-dark); position: sticky; top: 0; z-index: 200; box-shadow: 0 2px 16px rgba(142,161,0,.35); }
-    .topbar-inner { max-width: 1140px; margin: 0 auto; padding: 0 1.25rem; display: grid; grid-template-columns: 1fr auto; align-items: center; height: 66px; gap: 1rem; }
-            .nav-links { display: flex; align-items: center; list-style: none; height: 66px; }
-    .nav-links a { display: flex; align-items: center; gap: .38rem; height: 100%; padding: 0 1rem; color: rgba(255,255,255,.75); font-size: .84rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; transition: .2s; border-bottom: 3px solid transparent; white-space: nowrap; cursor: pointer; }
-    .nav-links a:hover  { color: var(--yellow); background: rgba(255,255,255,.04); }
-    .nav-links a.active { color: var(--yellow); border-bottom-color: var(--yellow); background: rgba(254,238,0,.05); }
-        
-    /* HERO */
-    .hero { background: linear-gradient(140deg, var(--navy) 0%, var(--blue-dark) 45%, var(--blue) 100%); color: var(--white); padding: 3.1rem 1.5rem 4.4rem; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 70% 60% at 15% 50%, rgba(254,238,0,.07) 0%, transparent 60%), radial-gradient(ellipse 40% 50% at 85% 30%, rgba(255,255,255,.04) 0%, transparent 60%); }
-    .hero::after  { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .5; background-image: radial-gradient(circle, rgba(254,238,0,.13) 1px, transparent 1px); background-size: 28px 28px; }
-    .hero-inner   { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: minmax(210px,300px) minmax(0,1fr); align-items: center; gap: 2.4rem; position: relative; z-index: 1; }
-    .hero-eyebrow { font-size: .72rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--yellow); margin-bottom: .75rem; opacity: 0; animation: fadeUp .6s ease forwards .2s; }
-    .hero h1      { font-size: clamp(2.6rem,7.5vw,5rem); font-weight: 700; line-height: .95; letter-spacing: -.03em; opacity: 0; animation: fadeUp .7s ease forwards .3s; }
-    .hero h1 em   { font-style: normal; color: var(--yellow); }
-    .hero-sub     { font-size: clamp(.98rem,2.6vw,1.12rem); font-weight: 300; color: rgba(255,255,255,.72); margin-top: .85rem; opacity: 0; animation: fadeUp .7s ease forwards .4s; }
-                    .hero-wave { position: absolute; bottom: -1px; left: 0; right: 0; line-height: 0; z-index: 1; }
-    .hero-wave svg { width: 100%; height: 56px; }
-
-    .topbar-inner-raduno { grid-template-columns: auto 1fr auto; }
-    .topbar-home-logo { display: none; align-items: center; justify-content: center; justify-self: start; height: 100%; }
-    .topbar-home-logo img { display: block; height: 42px; width: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,.18)); }
-    .podistica-topbar-inner { grid-template-columns: 1fr auto; }
-    .podistica-topbar-nav { justify-self: end; grid-column: 2; }
-    .mobile-nav { display: none; background: var(--navy); border-top: 1px solid rgba(255,255,255,.07); }
-    .mobile-nav.open { display: block; }
-    .mobile-nav a { display: flex; align-items: center; gap: .65rem; padding: .85rem 1.5rem; color: rgba(255,255,255,.78); font-size: .88rem; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,.05); }
-    .mobile-nav a:hover, .mobile-nav a.active { color: var(--yellow); background: rgba(254,238,0,.05); }
-    .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; justify-self: end; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: .3s; }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .hero-brand-logo { width: min(100%,280px); height: auto; display: block; filter: drop-shadow(0 8px 24px rgba(0,0,0,.24)); justify-self: center; opacity: 0; animation: fadeUp .6s ease forwards .12s; }
-    .hero-inner-raduno { grid-template-columns: minmax(210px,300px) minmax(0,1fr); }
-    .hero-brand-link-raduno { display: inline-flex; justify-self: center; }
-    .hero-brand-logo-raduno { width: min(100%,280px); }
     .podistica-hero .hero-copy { text-align: left; }
 
     /* CONTENT */
@@ -101,37 +64,25 @@
     .info-item strong { font-size: .76rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--yellow-dark); }
     .info-item span { font-size: .84rem; color: var(--text); line-height: 1.45; }
 
-    /* FOOTER */
-    footer { background: var(--navy); color: rgba(255,255,255,.5); text-align: center; padding: 2.8rem 1.5rem; font-size: .85rem; line-height: 1.8; }
-    .footer-main-logo { height: 44px; width: auto; display: block; margin: 0 auto .7rem; }
-    footer strong { color: var(--yellow); }
-    .footer-partners { max-width: 920px; margin: 1.35rem auto 0; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.08); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; align-items: center; }
-    .footer-partner-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08); border-radius: 16px; padding: .9rem; min-height: 110px; display: flex; align-items: center; justify-content: center; }
-    .footer-partner-card img { max-width: 100%; max-height: 64px; width: auto; height: auto; display: block; }
-    .footer-partner-card.usgb img { max-height: 74px; }
-    footer small  { font-size: .76rem; opacity: .45; display: block; margin-top: .35rem; }
-
     /* LEAFLET */
     .leaflet-popup-content-wrapper { font-family: 'Poppins', sans-serif !important; border-radius: 14px !important; box-shadow: var(--shadow-md) !important; border: 1.5px solid var(--border) !important; }
     .leaflet-popup-content { margin: 12px 16px !important; font-size: 13px !important; }
     .popup-title { font-weight: 700; color: var(--blue-dark); font-size: .93rem; }
     .popup-sub   { color: var(--text-soft); font-size: .74rem; margin-top: 2px; }
 
-    @keyframes fadeUp { from { opacity:0; transform:translateY(13px); } to { opacity:1; transform:translateY(0); } }
-
-    @media (max-width: 900px) { .content-wrap { grid-template-columns: 1fr; } .hero-inner { grid-template-columns: 1fr; } .podistica-hero .hero-copy { text-align: center; } .hero-brand-logo { width:min(68vw,220px); } .topbar-home-logo img { height: 38px; } .hero-inner-raduno { gap: 1rem; } }
-    @media (max-width: 600px) { #map { height: 420px; } .topbar-inner { height: auto; min-height: 60px; padding: .4rem .9rem; } .topbar-inner-raduno { display: flex; justify-content: flex-end; align-items: center; gap: .55rem; } .topbar-home-logo { display: inline-flex; justify-self: auto; order: 1; } .topbar-home-logo img { height: 32px; } .topbar-nav { display: none; } .podistica-topbar-nav { display: none; } .mobile-nav { width: 100%; max-width: none; } .mobile-nav.open { display: block; width: 100%; } .hamburger { display: flex; justify-self: end; order: 2; margin-left: .75rem; } .hero { padding-top: 2.3rem; } .hero-inner-raduno { grid-template-columns: 1fr; gap: 0; } .hero-brand-link-raduno { display: none; } .content-wrap { padding-top: 1.4rem; } .footer-partners { grid-template-columns: 1fr; } .footer-partner-card { min-height: 96px; } }
+    @media (max-width: 900px) { .content-wrap { grid-template-columns: 1fr; } .podistica-hero .hero-copy { text-align: center; } }
+    @media (max-width: 600px) { #map { height: 420px; } .content-wrap { padding-top: 1.4rem; } }
   </style>
 </head>
 <body>
 
 <header class="topbar">
-  <div class="topbar-inner topbar-inner-raduno podistica-topbar-inner">
+  <div class="topbar-inner topbar-inner-raduno">
     <a class="topbar-home-logo" href="index.html" aria-label="Torna alla homepage della Sagra della Campagna">
       <img src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna">
     </a>
-    <nav class="topbar-nav podistica-topbar-nav">
-      <ul class="nav-links">
+    <nav>
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html"><span class="ni">📅</span>Programma</a></li>
         <li><a href="mangiare.html"><span class="ni">🍽️</span>Mangiare</a></li>
         <li><a href="podistica-campagna-map.html" class="active"><span class="ni">🏃</span>Podistica</a></li>
@@ -153,7 +104,7 @@
 </header>
 
 <section class="hero podistica-hero">
-  <div class="hero-inner hero-inner-raduno podistica-hero-inner">
+  <div class="hero-inner hero-inner-raduno">
     <a class="hero-brand-link-raduno" href="index.html"><img class="hero-brand-logo hero-brand-logo-raduno" src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna"></a>
     <div class="hero-copy">
       <p class="hero-eyebrow">Pieve Cesato &middot; 66ª Edizione</p>
