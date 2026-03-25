@@ -56,8 +56,11 @@
                     .hero-wave { position: absolute; bottom: -1px; left: 0; right: 0; line-height: 0; z-index: 1; }
     .hero-wave svg { width: 100%; height: 56px; }
 
+    .topbar-inner-raduno { grid-template-columns: auto 1fr auto; }
+    .topbar-home-logo { display: none; align-items: center; justify-content: center; justify-self: start; height: 100%; }
+    .topbar-home-logo img { display: block; height: 42px; width: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,.18)); }
     .podistica-topbar-inner { grid-template-columns: 1fr auto; }
-    .podistica-topbar-nav { justify-self: end; }
+    .podistica-topbar-nav { justify-self: end; grid-column: 2; }
     .mobile-nav { display: none; background: var(--navy); border-top: 1px solid rgba(255,255,255,.07); }
     .mobile-nav.open { display: block; }
     .mobile-nav a { display: flex; align-items: center; gap: .65rem; padding: .85rem 1.5rem; color: rgba(255,255,255,.78); font-size: .88rem; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,.05); }
@@ -68,6 +71,9 @@
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .hero-brand-logo { width: min(100%,280px); height: auto; display: block; filter: drop-shadow(0 8px 24px rgba(0,0,0,.24)); justify-self: center; opacity: 0; animation: fadeUp .6s ease forwards .12s; }
+    .hero-inner-raduno { grid-template-columns: minmax(210px,300px) minmax(0,1fr); }
+    .hero-brand-link-raduno { display: inline-flex; justify-self: center; }
+    .hero-brand-logo-raduno { width: min(100%,280px); }
     .podistica-hero .hero-copy { text-align: left; }
 
     /* CONTENT */
@@ -113,19 +119,23 @@
 
     @keyframes fadeUp { from { opacity:0; transform:translateY(13px); } to { opacity:1; transform:translateY(0); } }
 
-    @media (max-width: 900px) { .content-wrap { grid-template-columns: 1fr; } .hero-inner { grid-template-columns: 1fr; } .podistica-hero .hero-copy { text-align: center; } .hero-brand-logo { width:min(68vw,220px); } }
-    @media (max-width: 600px) { #map { height: 420px; } .topbar-inner { grid-template-columns: 1fr auto; height: auto; min-height: 60px; padding-top: .5rem; padding-bottom: .5rem; } .topbar-nav { display: none; } .hamburger { display: flex; } .hero { padding-top: 2.6rem; } .content-wrap { padding-top: 1.4rem; } .footer-partners { grid-template-columns: 1fr; } .footer-partner-card { min-height: 96px; } }
+    @media (max-width: 900px) { .content-wrap { grid-template-columns: 1fr; } .hero-inner { grid-template-columns: 1fr; } .podistica-hero .hero-copy { text-align: center; } .hero-brand-logo { width:min(68vw,220px); } .topbar-home-logo img { height: 38px; } .hero-inner-raduno { gap: 1rem; } }
+    @media (max-width: 600px) { #map { height: 420px; } .topbar-inner { grid-template-columns: 1fr auto; height: auto; min-height: 60px; padding-top: .5rem; padding-bottom: .5rem; } .topbar-inner-raduno { grid-template-columns: auto 1fr auto; align-items: center; column-gap: .75rem; } .topbar-home-logo { display: inline-flex; } .topbar-home-logo img { height: 32px; } .topbar-nav { display: none; } .podistica-topbar-nav { justify-self: end; } .hamburger { display: flex; } .hero { padding-top: 2.3rem; } .hero-inner-raduno { grid-template-columns: 1fr; gap: 0; } .hero-brand-link-raduno { display: none; } .content-wrap { padding-top: 1.4rem; } .footer-partners { grid-template-columns: 1fr; } .footer-partner-card { min-height: 96px; } }
   </style>
 </head>
 <body>
 
 <header class="topbar">
-  <div class="topbar-inner podistica-topbar-inner">
+  <div class="topbar-inner topbar-inner-raduno podistica-topbar-inner">
+    <a class="topbar-home-logo" href="index.html" aria-label="Torna alla homepage della Sagra della Campagna">
+      <img src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna">
+    </a>
     <nav class="topbar-nav podistica-topbar-nav">
       <ul class="nav-links">
         <li><a href="index.html"><span class="ni">📅</span>Programma</a></li>
         <li><a href="mangiare.html"><span class="ni">🍽️</span>Mangiare</a></li>
         <li><a href="podistica-campagna-map.html" class="active"><span class="ni">🏃</span>Podistica</a></li>
+        <li><a href="raduno-auto-moto.html"><span class="ni">🚗</span>Raduno</a></li>
         <li><a href="index.html#dove-siamo"><span class="ni">📍</span>Dove Siamo</a></li>
       </ul>
     </nav>
@@ -137,16 +147,17 @@
     <a href="index.html">📅 Programma</a>
     <a href="mangiare.html">🍽️ Mangiare</a>
     <a href="podistica-campagna-map.html" class="active">🏃 Podistica</a>
+    <a href="raduno-auto-moto.html">🚗 Raduno</a>
     <a href="index.html#dove-siamo">📍 Dove Siamo</a>
   </nav>
 </header>
 
 <section class="hero podistica-hero">
-  <div class="hero-inner podistica-hero-inner">
-    <a href="index.html"><img class="hero-brand-logo" src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna"></a>
+  <div class="hero-inner hero-inner-raduno podistica-hero-inner">
+    <a class="hero-brand-link-raduno" href="index.html"><img class="hero-brand-logo hero-brand-logo-raduno" src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna"></a>
     <div class="hero-copy">
       <p class="hero-eyebrow">Pieve Cesato &middot; 66ª Edizione</p>
-      <h1>Podistica della<br><em>Campagna</em></h1>
+      <h1>35<sup>a</sup> Podistica della<br><em>Campagna</em></h1>
       <p class="hero-sub">10 km tra le campagne faentine lungo il Fiume Lamone — partenza e arrivo a Pieve Cesato</p>
     </div>
   </div>

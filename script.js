@@ -46,10 +46,10 @@ const DAYS = [
     {time:"22.45", icon:"dj", title:"DJ SET con GAO DJ"}
   ]},
   { id:"sab2", short:"Sab", num:"2", month:"Maggio", fullName:"Sabato 2 Maggio", events:[
-    {time:"9.00", icon:"car", title:"16° RADUNO DI AUTO, MOTO e… MEZZI AGRICOLI DI INTERESSE STORICO", nota:"Iscrizione gratuita", type:"highlight"},
+    {time:"9.00", icon:"car", title:"16° RADUNO DI AUTO, MOTO e… MEZZI AGRICOLI DI INTERESSE STORICO", nota:"Iscrizione gratuita", type:"highlight", link:"raduno-auto-moto.html"},
     {time:"11.30", icon:"food", title:"Apertura stand gastronomico", type:"food", link:"mangiare.html"},
-    {time:"13.30", icon:"trophy", title:"Premiazioni radunisti"},
-    {time:"14.15", icon:"map", title:"PARTENZA del GIRO TURISTICO — Visita al MUSEO VAROLI di COTIGNOLA"},
+    {time:"13.30", icon:"trophy", title:"Premiazioni radunisti", link:"raduno-auto-moto.html"},
+    {time:"14.15", icon:"map", title:"PARTENZA del GIRO TURISTICO — Visita al MUSEO VAROLI di COTIGNOLA", link:"raduno-auto-moto.html"},
     {time:"18.30", icon:"food", title:"Apertura stand gastronomico", type:"food", link:"mangiare.html"},
     {time:"19.15", icon:"show", title:"ANDRO presenta SANTA CLOWN", subtitle:"Uno spettacolo comico e poetico", desc:"Nella lunga notte dei regali, lo spirito del Clown si sveglia ed osserva con meraviglia la propria stanza addobbata a festa"},
     {time:"20.00", icon:"music", title:"LELINO E LA SUA GIUNTA BAND — concerto LÀSA STÉ", type:"highlight"},
