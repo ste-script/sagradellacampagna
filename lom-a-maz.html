@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lom a Maz — Sagra della Campagna 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/images/logo-sagra-2025.png">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner topbar-inner-raduno">
+    <a class="topbar-home-logo" href="index.html" aria-label="Torna alla homepage della Sagra della Campagna">
+      <img src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna">
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><span class="ni">📅</span>Programma</a></li>
+        <li><a href="mangiare.html"><span class="ni">🍽️</span>Mangiare</a></li>
+        <li><a href="podistica-campagna-map.html"><span class="ni">🏃</span>Podistica</a></li>
+        <li><a href="raduno-auto-moto.html"><span class="ni">🚗</span>Raduno</a></li>
+        <li><a href="mercatino-manufatti-paesani.html"><span class="ni">🧵</span>Mercatino</a></li>
+        <li><a href="corsa-dei-somari.html"><span class="ni">🐴</span>Somari</a></li>
+        <li><a href="lom-a-maz.html" class="active"><span class="ni">🔥</span>Lom a Maz</a></li>
+        <li><a href="index.html#dove-siamo"><span class="ni">📍</span>Dove Siamo</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">📅 Programma</a>
+    <a href="mangiare.html">🍽️ Mangiare</a>
+    <a href="podistica-campagna-map.html">🏃 Podistica</a>
+    <a href="raduno-auto-moto.html">🚗 Raduno</a>
+    <a href="mercatino-manufatti-paesani.html">🧵 Mercatino</a>
+    <a href="corsa-dei-somari.html">🐴 Somari</a>
+    <a href="lom-a-maz.html" class="active">🔥 Lom a Maz</a>
+    <a href="index.html#dove-siamo">📍 Dove Siamo</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner hero-inner-raduno">
+    <a class="hero-brand-link-raduno" href="index.html"><img class="hero-brand-logo hero-brand-logo-raduno" src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna"></a>
+    <div class="hero-copy">
+      <p class="hero-eyebrow">Pieve Cesato &middot; Tradizione</p>
+      <h1>Lom a<br><em>Maz</em></h1>
+      <p class="hero-sub">La notte del fuoco, della luce e del ritorno della stagione luminosa: una tradizione che unisce memoria popolare e festa condivisa.</p>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1200 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,28 C200,56 400,0 600,28 C800,56 1000,0 1200,28 L1200,56 L0,56 Z" fill="#f5f7fc"/>
+    </svg>
+  </div>
+</section>
+
+<section class="food-page lom-page">
+  <div class="lom-shell food-menu-shell">
+    <div class="lom-layout">
+      <div class="lom-main">
+        <div class="lom-intro-card">
+          <p class="hero-eyebrow">Notte del fuoco</p>
+          <h2>Una festa antica che celebra la vittoria della luce</h2>
+          <p>La notte tra il <strong>30 Aprile</strong> e il <strong>1 Maggio</strong> segna il momento di passaggio verso la seconda metà dell'anno, quella luminosa: è la festa della vittoria della luce sulle tenebre, la festa più importante della tradizione celtica.</p>
+          <p>Il mondo e la natura si risvegliano dal lungo torpore invernale. Il mondo antico sapeva quanto valesse il ritorno della stagione calda e godeva di quel tempo con tutto l'entusiasmo di cui poteva disporre.</p>
+        </div>
+
+        <div class="lom-photo-band">
+          <img class="lom-photo lom-photo-wide" src="assets/images/lom-a-maz-1.jpg" alt="Falò del Lom a Maz a Pieve Cesato">
+        </div>
+
+        <div class="lom-story-card food-menu-shell">
+          <p> Nella tradizione popolare di molti paesi si festeggia questa notte tra il <strong>30 Aprile</strong> e il <strong>1 Maggio</strong> accendendo fuochi sulle colline, intrecciando danze attorno al falò.</p>
+          <p>Anche qui a <strong>Pieve Cesato</strong> si festeggia il ritorno ...alla <strong>LUCE</strong> con il <strong>LOM A MAZ</strong>, ballando attorno al falò sulle note di antiche ballate popolari.</p>
+        </div>
+      </div>
+
+      <aside class="lom-side">
+        <div class="lom-highlight-card">
+          <img class="lom-photo lom-photo-tall" src="assets/images/lom-a-maz-2.jpg" alt="Fiamme del falò del Lom a Maz">
+          <div class="lom-highlight-copy">
+            <p class="hero-eyebrow">Il falò</p>
+            <h3>Un rito collettivo attorno al fuoco</h3>
+            <p>Il fuoco diventa il centro simbolico della festa: illumina la notte, richiama la comunità e accompagna il passaggio verso la stagione nuova.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img class="footer-main-logo" src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna">
+  <strong>66ª Sagra della Campagna</strong> &middot; Pieve Cesato (RA)<br>
+  <span style="font-size:0.7rem;opacity:0.45;display:block;margin-top:0.35rem">Orari e programma possono subire variazioni &middot; &copy; 2026 Pro Loco Pieve Cesato</span>
+  <div class="footer-partners">
+    <div class="footer-partner-card">
+      <img src="assets/images/logo-feste-sagre-scuola.png" alt="Comitato Feste e Sagre per la Scuola">
+    </div>
+    <div class="footer-partner-card usgb">
+      <img src="assets/images/logo-usgb.png" alt="USGB Pieve Cesato">
+    </div>
+    <div class="footer-partner-card">
+      <img src="assets/images/logo-feste-sagre-2024.png" alt="Logo Feste e Sagre">
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
