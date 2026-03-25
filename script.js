@@ -96,9 +96,21 @@ function buildPanels() {
     d.events.forEach((ev, idx) => {
       const fd = ev.type === 'food';
       const isLinked = ev.link && ev.link.trim() !== '';
-      const card = document.createElement(isLinked ? 'a' : 'div');
+      const card = document.createElement('div');
       card.className = 'event-card' + (fd ? ' food' : '') + (isLinked ? ' event-link' : '');
-      if (isLinked) card.href = ev.link;
+      if (isLinked) {
+        card.dataset.link = ev.link;
+        card.setAttribute('role', 'link');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('aria-label', ev.title);
+        card.addEventListener('click', () => { window.location.href = ev.link; });
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            window.location.href = ev.link;
+          }
+        });
+      }
       card.dataset.day = d.id;
       card.dataset.index = String(idx);
       card.dataset.time = ev.time;
