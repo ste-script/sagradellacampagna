@@ -19,7 +19,7 @@
     </div>
     <nav>
       <ul class="nav-links" id="navLinks">
-        <li><a data-page="programma" class="active" onclick="showPage('programma')"><span class="ni">📅</span>Programma</a></li>
+        <li><a href="index.html" data-page="programma" class="active" onclick="showPage('programma'); return false;"><span class="ni">📅</span>Programma</a></li>
         <li><a href="mangiare.html"><span class="ni">🍽️</span>Mangiare</a></li>
         <li class="nav-dropdown">
           <button class="nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
@@ -43,7 +43,7 @@
     </button>
   </div>
   <nav class="mobile-nav" id="mobileNav">
-    <a data-page="programma" class="active" onclick="showPage('programma');toggleMobile()">📅 Programma</a>
+    <a href="index.html" data-page="programma" class="active" onclick="showPage('programma');toggleMobile(); return false;">📅 Programma</a>
     <a href="mangiare.html">🍽️ Mangiare</a>
     <a href="podistica-campagna-map.html">🏃 Podistica</a>
     <a href="raduno-auto-moto.html">🚗 Raduno</a>
