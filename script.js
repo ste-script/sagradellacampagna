@@ -62,7 +62,7 @@ const DAYS = [
     {time:"14.30", icon:"music", title:"Concerto della band WORK IN PROGRESS"},
     {time:"Pomeriggio", icon:"kids", title:"BUSKERS, ANIMAZIONI, GIOCOLERIA, TRUCCABIMBI — LAURA e i giochi di NONNO BANTER"},
     {time:"14.30", icon:"horse", title:"HOBBY HORSES — 3° raduno degli ASINI con bastone", desc:"Con GARA di Asini a Bastone e carota e altre novità (ideazione artistica a cura di Luigi Berardi)"},
-    {time:"15.00", icon:"games", title:"GIOCHI DELLA TRADIZIONE POPOLARE ROMAGNOLA — 32° TORNEO DI BARANDELL"},
+    {time:"15.00", icon:"games", title:"GIOCHI DELLA TRADIZIONE POPOLARE ROMAGNOLA — 32° TORNEO DI BARANDELL", link:"barandell.html"},
     {time:"15.30", icon:"church", title:"Visita guidata alla Chiesa Arcipretale di Pieve Cesato", subtitle:"Guidata dall'Arciprete Don Claudio"},
     {time:"16.00", icon:"games", title:"Giochi a premi (area green) — GIMKANA COL TOSAERBA (gara a coppie)"},
     {time:"17.30", icon:"kids", title:"CARLETTO E L'UOVO D'ORO — ALL'INCIRCO", subtitle:"Spettacolo di Burattini in baracca · Angolo dei Bambini", type:"highlight"},

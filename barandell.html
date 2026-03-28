@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gioco del Barandell — Sagra della Campagna 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/images/logo-sagra-2025.png">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner topbar-inner-raduno">
+    <a class="topbar-home-logo" href="index.html" aria-label="Torna alla homepage della Sagra della Campagna">
+      <img src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna">
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><span class="ni">📅</span>Programma</a></li>
+        <li><a href="mangiare.html"><span class="ni">🍽️</span>Mangiare</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+            <span class="ni">🎪</span>Eventi
+            <span class="nav-caret">▾</span>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="podistica-campagna-map.html"><span class="ni">🏃</span>Podistica</a>
+            <a href="raduno-auto-moto.html"><span class="ni">🚗</span>Raduno</a>
+            <a href="barandell.html" class="active"><span class="ni">🎯</span>Barandell</a>
+            <a href="corsa-dei-somari.html"><span class="ni">🐴</span>Somari</a>
+            <a href="lom-a-maz.html"><span class="ni">🔥</span>Lom a Maz</a>
+          </div>
+        </li>
+        <li><a href="mercatino-manufatti-paesani.html"><span class="ni">🧵</span>Mercatino</a></li>
+        <li><a href="index.html#dove-siamo"><span class="ni">📍</span>Dove Siamo</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">📅 Programma</a>
+    <a href="mangiare.html">🍽️ Mangiare</a>
+    <a href="podistica-campagna-map.html">🏃 Podistica</a>
+    <a href="raduno-auto-moto.html">🚗 Raduno</a>
+    <a href="barandell.html" class="active">🎯 Barandell</a>
+    <a href="corsa-dei-somari.html">🐴 Somari</a>
+    <a href="lom-a-maz.html">🔥 Lom a Maz</a>
+    <a href="mercatino-manufatti-paesani.html">🧵 Mercatino</a>
+    <a href="index.html#dove-siamo">📍 Dove Siamo</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner hero-inner-raduno">
+    <a class="hero-brand-link-raduno" href="index.html"><img class="hero-brand-logo hero-brand-logo-raduno" src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna"></a>
+    <div class="hero-copy">
+      <p class="hero-eyebrow">Pieve Cesato &middot; Tradizione romagnola</p>
+      <h1>Gioco del<br><em>Barandell</em></h1>
+      <p class="hero-sub">Un antico gioco contadino di mira e precisione, tramandato nel tempo e ancora oggi capace di raccontare il legame profondo tra festa, territorio e cultura popolare.</p>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1200 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,28 C200,56 400,0 600,28 C800,56 1000,0 1200,28 L1200,56 L0,56 Z" fill="#f5f7fc"/>
+    </svg>
+  </div>
+</section>
+
+<section class="food-page barandell-page">
+  <div class="barandell-shell food-menu-shell">
+    <div class="barandell-layout">
+      <div class="barandell-main">
+        <div class="barandell-intro-card">
+          <p class="hero-eyebrow">Gioco della tradizione</p>
+          <h2>Una sfida di precisione nata nella civiltà contadina</h2>
+          <p>Il <strong>barandell</strong> è un gioco dell'antica tradizione contadina romagnola-ferrarese, appartenente alla famiglia delle bocce e fondato su <strong>mira, sensibilità e precisione del lancio</strong>.</p>
+          <p>Le origini esatte non sono note, ma i racconti tramandati oralmente confermano che veniva praticato già nei primi decenni dell'<strong>Ottocento</strong>, spesso accanto a un altro gioco tradizionale romagnolo: lo <strong>Zachegn</strong>.</p>
+          <p>Il nome “barandell” indica in dialetto romagnolo un <strong>bastone corto di legno</strong>, un randello: proprio questo elemento semplice diventa il riferimento centrale del gioco e ne definisce identità e regole.</p>
+        </div>
+
+        <div class="barandell-feature-grid">
+          <article class="barandell-feature-card">
+            <p class="hero-eyebrow">Campo di gioco</p>
+            <h3>Uno spazio essenziale, ma preciso</h3>
+            <p>L'area di gioco è un rettangolo su terreno piano di circa <strong>3 x 10 metri</strong>. Si può giocare su erba, terra battuta e persino su sabbia: conta soprattutto la regolarità del fondo.</p>
+          </article>
+          <article class="barandell-feature-card">
+            <p class="hero-eyebrow">Il barandell</p>
+            <h3>Il bastone che dà nome al gioco</h3>
+            <p>Il barandell è un bastone lungo circa <strong>60 cm</strong> e con diametro di circa <strong>3 cm</strong>, posizionato a una distanza che varia in genere tra <strong>6,5 e 8 metri</strong> dall'area di tiro.</p>
+          </article>
+          <article class="barandell-feature-card highlight">
+            <p class="hero-eyebrow">Bersaglio</p>
+            <h3>Due bocce da far uscire</h3>
+            <p>All'interno dell'area del barandell vengono collocate <strong>due bocce</strong>, distanti tra loro circa <strong>8 cm</strong> e posizionate a circa <strong>20 cm</strong> dal bastone.</p>
+          </article>
+        </div>
+
+        <div class="barandell-rules-card food-menu-shell">
+          <p class="hero-eyebrow">Come si gioca</p>
+          <h3>Regole essenziali del Barandell</h3>
+          <ol class="barandell-rules-list">
+            <li>Ogni concorrente dispone di <strong>una boccia</strong> da lanciare dall'area di tiro, posta in fondo al campo.</li>
+            <li>Lo scopo è <strong>far uscire dall'area del barandell</strong> una o entrambe le bocce bersaglio.</li>
+            <li>L'asta che delimita l'area di tiro è collocata orizzontalmente a <strong>30 cm da terra</strong>: se viene abbattuta, il tiro è annullato.</li>
+            <li>Il contatto diretto con il barandell durante il lancio <strong>annulla il punteggio</strong>; se invece il tocco avviene di rimbalzo, il punteggio resta valido.</li>
+            <li>Se escono dall'area una o due bocce insieme alla propria, si ottiene <strong>punteggio semplice</strong>: 1 o 2 punti.</li>
+            <li>Se il lancio fa uscire le bocce bersaglio e la propria rimane dentro l'area, si realizza il cosiddetto <strong>“boccio secco”</strong>, con punteggio raddoppiato: 2 o 4 punti.</li>
+            <li>La forma più comune è quella <strong>individuale</strong>, con 10 turni di lancio alternati; in alcune località si gioca anche a coppie o a squadre.</li>
+          </ol>
+        </div>
+      </div>
+
+      <aside class="barandell-side">
+        <div class="barandell-highlight-card">
+          <p class="hero-eyebrow">Tra memoria e tutela</p>
+          <h3>Una tradizione riconosciuta e condivisa</h3>
+          <p>Il gioco del Barandell è stato presentato alla <strong>XXII edizione del Festival Tocatì di Verona</strong> nel 2024, dedicato al gioco e allo sport tradizionale.</p>
+          <p>Insieme all'antico gioco dello <strong>Zachegn</strong>, rientra nel programma condiviso per la salvaguardia dei giochi tradizionali e si collega al riconoscimento UNESCO delle <strong>Buone Pratiche di Salvaguardia del Patrimonio Culturale Immateriale</strong>.</p>
+        </div>
+
+        <div class="barandell-detail-card food-menu-shell">
+          <p class="hero-eyebrow">Attrezzi di gioco</p>
+          <ul class="barandell-detail-list">
+            <li><strong>2 bocce</strong> per il bersaglio</li>
+            <li><strong>1 boccia</strong> per ogni concorrente</li>
+            <li><strong>1 barandell</strong> in legno</li>
+            <li><strong>1 asta</strong> per delimitare l'area di tiro</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img class="footer-main-logo" src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna">
+  <strong>66ª Sagra della Campagna</strong> &middot; Pieve Cesato (RA)<br>
+  <span style="font-size:0.7rem;opacity:0.45;display:block;margin-top:0.35rem">Orari e programma possono subire variazioni &middot; &copy; 2026 Pro Loco Pieve Cesato</span>
+  <div class="footer-partners">
+    <div class="footer-partner-card">
+      <img src="assets/images/logo-feste-sagre-scuola.png" alt="Comitato Feste e Sagre per la Scuola">
+    </div>
+    <div class="footer-partner-card usgb">
+      <img src="assets/images/logo-usgb.png" alt="USGB Pieve Cesato">
+    </div>
+    <div class="footer-partner-card">
+      <img src="assets/images/logo-feste-sagre-2024.png" alt="Logo Feste e Sagre">
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
