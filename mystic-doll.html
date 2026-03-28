@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystic Doll — Sagra della Campagna 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/images/logo-sagra-2025.png">
+<style>
+.simple-event-topbar{background:var(--blue-dark);position:sticky;top:0;z-index:200;box-shadow:0 2px 16px rgba(142,161,0,.35)}
+.simple-event-topbar-inner{max-width:980px;margin:0 auto;padding:0 1.25rem;min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.simple-event-back{display:inline-flex;align-items:center;gap:.65rem;color:var(--white);font-size:.92rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:.78rem 1rem;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);transition:.2s}
+.simple-event-back:hover{background:rgba(255,255,255,.14);color:var(--yellow)}
+.simple-event-back svg{width:18px;height:18px;flex:0 0 18px}
+.simple-event-topbar-logo{display:inline-flex;align-items:center;justify-content:center}
+.simple-event-topbar-logo img{height:36px;width:auto;display:block}
+.simple-event-page{max-width:980px;margin:0 auto;padding:2.4rem 1.25rem 4rem}
+.simple-event-shell{background:rgba(255,255,255,.95);border:1px solid var(--border);border-radius:26px;box-shadow:var(--shadow-md);overflow:hidden}
+.simple-event-hero{padding:2rem 2rem 1.35rem;background:linear-gradient(145deg, rgba(13,27,53,.98), rgba(142,161,0,.94));color:var(--white);position:relative;overflow:hidden}
+.simple-event-hero::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right, rgba(255,255,255,.12), transparent 36%);pointer-events:none}
+.simple-event-eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow);margin-bottom:.8rem}
+.simple-event-hero h1{font-size:clamp(2.2rem,6vw,4rem);line-height:.95;letter-spacing:-.03em}
+.simple-event-hero h1 em{font-style:normal;color:var(--yellow)}
+.simple-event-sub{margin-top:.85rem;max-width:54ch;font-size:1rem;line-height:1.7;color:rgba(255,255,255,.82)}
+.simple-event-body{padding:1.5rem;display:grid;grid-template-columns:minmax(0,1.2fr) 320px;gap:1.25rem}
+.simple-event-card,.simple-event-side-card{background:linear-gradient(180deg, rgba(255,255,255,1), rgba(243,248,210,.38));border:1px solid var(--border);border-radius:22px;box-shadow:var(--shadow-sm)}
+.simple-event-card{padding:1.35rem}
+.simple-event-card h2{font-size:1.55rem;color:var(--blue-dark);margin-bottom:.95rem}
+.simple-event-card p{font-size:1rem;line-height:1.8;color:var(--text-soft)}
+.simple-event-card p + p{margin-top:.85rem}
+.simple-event-info-list{display:grid;gap:.8rem;margin-top:1rem}
+.simple-event-info-item{display:grid;gap:.14rem;padding:.8rem .9rem;background:rgba(255,255,255,.92);border:1px solid var(--border);border-radius:16px}
+.simple-event-info-item strong{font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#CF057C}
+.simple-event-info-item span{font-size:.95rem;color:var(--text);line-height:1.5}
+.simple-event-side{display:grid;gap:1rem}
+.simple-event-side-card{padding:1.2rem}
+.simple-event-side-card h3{font-size:1.15rem;color:var(--blue-dark);margin-bottom:.7rem}
+.simple-event-side-card p{font-size:.95rem;line-height:1.7;color:var(--text-soft)}
+.simple-event-actions{display:grid;gap:.75rem;margin-top:1rem}
+.simple-event-action{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.9rem 1rem;border-radius:999px;background:var(--yellow);color:var(--white);font-weight:700;font-size:.92rem;line-height:1;box-shadow:var(--shadow-sm);transition:.2s}
+.simple-event-action:hover{background:var(--yellow-dark)}
+.simple-event-action.secondary{background:var(--blue-dark)}
+.simple-event-action.secondary:hover{background:var(--navy)}
+.simple-event-action svg{width:18px;height:18px;flex:0 0 18px}
+.simple-event-note{margin-top:.95rem;font-size:.82rem;color:#6a7285}
+.simple-event-footer{background:var(--navy);color:rgba(255,255,255,.68);padding:1.35rem 1rem;text-align:center;font-size:.8rem;line-height:1.65}
+.simple-event-footer strong{color:var(--yellow)}
+.simple-event-footer img{height:30px;width:auto;display:block;margin:0 auto .45rem}
+@media (max-width:900px){.simple-event-body{grid-template-columns:1fr}.simple-event-page{padding-top:1.4rem}}
+@media (max-width:680px){.simple-event-topbar-inner{padding:.65rem .9rem;min-height:60px}.simple-event-back{font-size:.82rem;padding:.72rem .9rem}.simple-event-topbar-logo img{height:30px}.simple-event-hero{padding:1.35rem 1.1rem 1.05rem}.simple-event-body{padding:1rem}.simple-event-card,.simple-event-side-card{padding:1rem;border-radius:18px}.simple-event-card h2{font-size:1.28rem}.simple-event-card p,.simple-event-side-card p,.simple-event-info-item span{font-size:.95rem}}
+</style>
+</head>
+<body>
+<header class="simple-event-topbar">
+  <div class="simple-event-topbar-inner">
+    <a class="simple-event-back" href="index.html" aria-label="Torna al programma della Sagra della Campagna">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/><path d="M21 12H9"/></svg>
+      <span>Indietro</span>
+    </a>
+    <a class="simple-event-topbar-logo" href="index.html" aria-label="Homepage della Sagra della Campagna">
+      <img src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna">
+    </a>
+  </div>
+</header>
+
+<main class="simple-event-page">
+  <section class="simple-event-shell">
+    <div class="simple-event-hero">
+      <p class="simple-event-eyebrow">Mercoledì 29 Aprile · ore 20:30</p>
+      <h1>Concerto della band <em>Mystic Doll</em></h1>
+      <p class="simple-event-sub">Una pagina modello per gli eventi del programma che non hanno bisogno di una pagina lunga: informazioni essenziali, link utili e un punto d'appoggio semplice da aprire dal calendario.</p>
+    </div>
+
+    <div class="simple-event-body">
+      <div class="simple-event-card">
+        <h2>Informazioni essenziali</h2>
+        <p><strong>Mystic Doll</strong> è uno degli appuntamenti musicali della Sagra della Campagna 2026. Questa pagina è pensata come <strong>template semplificato</strong> per tutti quegli eventi che non richiedono una struttura completa come Somari, Raduno, Podistica o Barandell.</p>
+        <p>L'idea è avere una pagina veloce da leggere, con solo le informazioni fondamentali: <strong>giorno, orario, tipo di evento, link social</strong> e, se serve, uno o due testi brevi.</p>
+
+        <div class="simple-event-info-list">
+          <div class="simple-event-info-item">
+            <strong>Quando</strong>
+            <span>Mercoledì 29 Aprile 2026 · ore 20:30</span>
+          </div>
+          <div class="simple-event-info-item">
+            <strong>Dove</strong>
+            <span>Sagra della Campagna · Pieve Cesato</span>
+          </div>
+          <div class="simple-event-info-item">
+            <strong>Categoria</strong>
+            <span>Concerto / live music</span>
+          </div>
+          <div class="simple-event-info-item">
+            <strong>Collegamento social</strong>
+            <span>Facebook ufficiale disponibile</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="simple-event-side">
+        <div class="simple-event-side-card">
+          <p class="simple-event-eyebrow">Social</p>
+          <h3>Segui la band</h3>
+          <p>Per ora ho messo il collegamento diretto al profilo Facebook ufficiale. Se questo formato ti piace, possiamo usare lo stesso schema per gli altri eventi ancora senza pagina dedicata.</p>
+          <div class="simple-event-actions">
+            <a class="simple-event-action" href="http://facebook.com/mysticdollband/?locale=it_IT" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              <span>Facebook</span>
+            </a>
+            <a class="simple-event-action secondary" href="index.html" >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18"/><path d="m12 3 9 9-9 9"/></svg>
+              <span>Torna al programma</span>
+            </a>
+          </div>
+          <p class="simple-event-note">Nota: non è ancora collegata dal programma. Serve come prototipo della versione semplificata.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="simple-event-footer">
+  <img src="assets/images/logo-sagra-2025.png" alt="Logo Sagra della Campagna">
+  <strong>66ª Sagra della Campagna</strong> · Pieve Cesato (RA)
+</footer>
+</body>
+</html>
