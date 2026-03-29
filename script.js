@@ -36,7 +36,7 @@ const DAYS = [
   { id:"ven1", short:"Ven", num:"1", month:"Maggio", fullName:"Venerdì 1° Maggio", events:[
     {time:"11.00", icon:"church", title:"Visita guidata alla Chiesa Arcipretale di Pieve Cesato", subtitle:"Guidata dall'Arciprete Don Claudio"},
     {time:"11.30", icon:"food", title:"Apertura stand gastronomico", type:"food", link:"mangiare.html"},
-    {time:"14.00", icon:"music", title:"Concerto con GLI ALLUVIONATI DEL LISCIO"},
+    {time:"14.00", icon:"music", title:"Concerto con GLI ALLUVIONATI DEL LISCIO", link:"simple-events/gli-alluvionati-del-liscio.html"},
     {time:"Pomeriggio", icon:"kids", title:"BUSKERS, ANIMAZIONI, GIOCOLERIA, TRUCCABIMBI — LAURA e i giochi di HAPPY FAMILY"},
     {time:"16.00", icon:"donkey", title:"L'ATTESISSIMA CORSA DEI SOMARI — 66ª edizione", nota:"L'orario di inizio potrà subire variazioni in caso di maltempo", type:"highlight", link:"corsa-dei-somari.html"},
     {time:"17.30", icon:"food", title:"Apertura stand gastronomico", type:"food", link:"mangiare.html"},
