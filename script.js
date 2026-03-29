@@ -43,7 +43,7 @@ const DAYS = [
     {time:"17.30", icon:"show", title:"Spettacolo di strada INTORNO", subtitle:"Giocoleria, equilibrismo, acrobazie… Compagnia MA.Re.", link:"simple-events/intorno.html"},
     {time:"18.30", icon:"piano", title:"Piano bar e music con il gruppo DUODè", link:"simple-events/duode.html"},
     {time:"20.30", icon:"show", title:"LA METALLURGICA VIGANÒ E MARIA PIA TIMO — HOTEL VIGANÒ", type:"highlight", link:"simple-events/metallurgica-vigano-maria-pia-timo.html"},
-    {time:"22.45", icon:"dj", title:"DJ SET con GAO DJ"}
+    {time:"22.45", icon:"dj", title:"DJ SET con GAO DJ", link:"simple-events/gao-dj.html"}
   ]},
   { id:"sab2", short:"Sab", num:"2", month:"Maggio", fullName:"Sabato 2 Maggio", events:[
     {time:"9.00", icon:"car", title:"16° RADUNO DI AUTO, MOTO e… MEZZI AGRICOLI DI INTERESSE STORICO", nota:"Iscrizione gratuita", type:"highlight", link:"raduno-auto-moto.html"},
