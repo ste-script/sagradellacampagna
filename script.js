@@ -59,7 +59,7 @@ const DAYS = [
   { id:"dom3", short:"Dom", num:"3", month:"Maggio", fullName:"Domenica 3 Maggio", events:[
     {time:"9.00", icon:"tractor", title:"4° SagriRADUNO — RADUNO DI TRATTORI D'EPOCA", subtitle:"Raduno ed esposizione di trattori e mezzi agricoli d'epoca", type:"highlight"},
     {time:"11.30", icon:"food", title:"Apertura stand gastronomico", type:"food", link:"mangiare.html"},
-    {time:"14.30", icon:"music", title:"Concerto della band WORK IN PROGRESS"},
+    {time:"14.30", icon:"music", title:"Concerto della band WORK IN PROGRESS", link:"simple-events/work-in-progress.html"},
     {time:"Pomeriggio", icon:"kids", title:"BUSKERS, ANIMAZIONI, GIOCOLERIA, TRUCCABIMBI — LAURA e i giochi di NONNO BANTER"},
     {time:"14.30", icon:"horse", title:"HOBBY HORSES — 3° raduno degli ASINI con bastone", desc:"Con GARA di Asini a Bastone e carota e altre novità (ideazione artistica a cura di Luigi Berardi)", link:"simple-events/hobby-horses.html"},
     {time:"15.00", icon:"games", title:"GIOCHI DELLA TRADIZIONE POPOLARE ROMAGNOLA — 32° TORNEO DI BARANDELL", link:"barandell.html"},
