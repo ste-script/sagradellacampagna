@@ -40,7 +40,7 @@ const DAYS = [
     {time:"Pomeriggio", icon:"kids", title:"BUSKERS, ANIMAZIONI, GIOCOLERIA, TRUCCABIMBI — LAURA e i giochi di HAPPY FAMILY"},
     {time:"16.00", icon:"donkey", title:"L'ATTESISSIMA CORSA DEI SOMARI — 66ª edizione", nota:"L'orario di inizio potrà subire variazioni in caso di maltempo", type:"highlight", link:"corsa-dei-somari.html"},
     {time:"17.30", icon:"food", title:"Apertura stand gastronomico", type:"food", link:"mangiare.html"},
-    {time:"17.30", icon:"show", title:"Spettacolo di strada INTORNO", subtitle:"Giocoleria, equilibrismo, acrobazie… Compagnia MA.Re."},
+    {time:"17.30", icon:"show", title:"Spettacolo di strada INTORNO", subtitle:"Giocoleria, equilibrismo, acrobazie… Compagnia MA.Re.", link:"simple-events/intorno.html"},
     {time:"18.30", icon:"piano", title:"Piano bar e music con il gruppo DUODè"},
     {time:"20.30", icon:"show", title:"LA METALLURGICA VIGANÒ E MARIA PIA TIMO — HOTEL VIGANÒ", type:"highlight"},
     {time:"22.45", icon:"dj", title:"DJ SET con GAO DJ"}
