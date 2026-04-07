@@ -64,6 +64,21 @@
     .info-item strong { font-size: .76rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--yellow-dark); }
     .info-item span { font-size: .84rem; color: var(--text); line-height: 1.45; }
     .podistica-share-button { margin-top: 1rem; width: 170px; max-width: 100%; justify-content: center; align-self: flex-start; }
+    .route-export-shell { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); display: grid; gap: .9rem; }
+    .route-export-copy { display: grid; gap: .28rem; }
+    .route-export-copy strong { font-size: .76rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--blue-dark); }
+    .route-export-copy p { font-size: .84rem; color: var(--text-soft); line-height: 1.5; }
+    .route-export-stack { display: grid; gap: .75rem; }
+    .route-export-group { display: grid; gap: .42rem; }
+    .route-export-button { display: inline-flex; align-items: center; justify-content: center; gap: .62rem; width: 100%; min-height: 48px; padding: .88rem 1rem; border-radius: 999px; color: var(--white); font-size: .9rem; font-weight: 700; letter-spacing: .01em; line-height: 1.1; box-shadow: var(--shadow-sm); }
+    .route-export-button svg { width: 17px; height: 17px; flex: 0 0 17px; }
+    .route-export-button-strava { background: #FC4C02; }
+    .route-export-button-strava:hover { background: #dd4300; }
+    .route-export-button-outdoor { background: #E05A2A; }
+    .route-export-button-outdoor:hover { background: #c84b1d; }
+    .route-export-note { font-size: .76rem; color: var(--text-soft); line-height: 1.45; }
+    .route-export-note a { color: var(--yellow-dark); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+    .route-export-mobile { display: none; }
 
     /* LEAFLET */
     .leaflet-popup-content-wrapper { font-family: 'Poppins', sans-serif !important; border-radius: 14px !important; box-shadow: var(--shadow-md) !important; border: 1.5px solid var(--border) !important; }
@@ -72,7 +87,13 @@
     .popup-sub   { color: var(--text-soft); font-size: .74rem; margin-top: 2px; }
 
     @media (max-width: 900px) { .content-wrap { grid-template-columns: 1fr; } .podistica-hero .hero-copy { text-align: center; } }
-    @media (max-width: 600px) { #map { height: 420px; } .content-wrap { padding-top: 1.4rem; } .podistica-share-button { width: 100%; } }
+    @media (max-width: 600px) {
+      #map { height: 420px; }
+      .content-wrap { padding-top: 1.4rem; }
+      .podistica-share-button { width: 100%; }
+      .route-export-mobile { display: inline-flex; }
+      .route-export-desktop { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -174,6 +195,35 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98"/><path d="m15.41 6.51-6.82 3.98"/></svg>
           <span>Condividi</span>
         </a>
+
+        <div class="route-export-shell" aria-label="Esporta il percorso in formato GPX">
+          <div class="route-export-copy">
+            <strong>Esporta il percorso</strong>
+            <p>Scarica il file GPX del tracciato per portarlo su Strava oppure aprirlo in Outdooractive.</p>
+          </div>
+
+          <div class="route-export-stack">
+            <div class="route-export-group">
+              <a class="route-export-button route-export-button-strava" href="assets/gpx/podistica-della-campagna-2026.gpx" download>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.45 2 13 9h-2.9L9.45 2Zm5.15 9 3.95 7h-3.1L11.5 11Zm-5.15 0 1.8 3.2H8.1L6.3 11Zm5.6 0L18 16.2h-3.05L12.05 11Z"/></svg>
+                <span>Scarica per Strava</span>
+              </a>
+              <p class="route-export-note"><a href="https://support.strava.com/hc/en-us/articles/206811950-Uploading-Route-Files" target="_blank" rel="noopener noreferrer">Guida Strava: come caricare i file percorso</a></p>
+            </div>
+
+            <div class="route-export-group">
+              <a class="route-export-button route-export-button-outdoor route-export-desktop" href="assets/gpx/podistica-della-campagna-2026.gpx" download>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v11"/><path d="m7 9 5 5 5-5"/><path d="M5 19h14"/></svg>
+                <span>Scarica per Outdooractive</span>
+              </a>
+              <a class="route-export-button route-export-button-outdoor route-export-mobile" href="assets/gpx/podistica-della-campagna-2026.gpx" type="application/gpx+xml">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+                <span>Apri in Outdooractive</span>
+              </a>
+              <p class="route-export-note">Da smartphone il file viene aperto direttamente dal browser: se l’app non si avvia subito, salva il GPX e aprilo con Outdooractive.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
