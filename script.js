@@ -28,7 +28,7 @@ const DAYS = [
     {time:"17.30", icon:"run", title:"Apertura iscrizioni 35ª PODISTICA DELLA CAMPAGNA", nota:"Contributo organizzativo: € 3,00 · Premio di partecipazione a tutti gli iscritti", link:"podistica-campagna-map.html"},
     {time:"19.00", icon:"run", title:"PARTENZA della Camminata Ludicomotoria (10 km) o Mini camminata (2 km)", link:"podistica-campagna-map.html"},
     {time:"19.00", icon:"food", title:"Apertura stand gastronomico", type:"food", link:"mangiare.html"},
-    {time:"20.00", icon:"trophy", title:"Premiazioni a tutte le Società partecipanti", subtitle:"(con minimo 10 partecipanti)"},
+    {time:"20.00", icon:"trophy", title:"Premiazioni a tutte le Società partecipanti", subtitle:"(con minimo 10 partecipanti)", link:"podistica-campagna-map.html"},
     {time:"20.30", icon:"music", title:"Concerto di DANIELA PERONI QUARTET", link:"simple-events/daniela-peroni-quartet.html"},
     {time:"22.30", icon:"fire", title:"LA FESTA DELLA LUCE", desc:"Acrobazie, Magie, Illusionismo e Giocoleria col FUOCO — presentato da COLLETTIVO STRA-VAGANTE", type:"highlight"},
     {time:"23.00", icon:"fire", title:"35° LOM A MAZ — ACCENSIONE DEL GRANDE FALÒ", desc:"BALLI ATTORNO AL FUOCO con il DUO TRABADELL ed il Gruppo di Ricerca ANTICHI BALLI · ASPETTANDO MEZZANOTTE E MAGGIO · VINO E CIAMBELLA PER TUTTI…", type:"highlight", link:"lom-a-maz.html"}
