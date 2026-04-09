@@ -20,7 +20,7 @@ const IC = {
 const DAYS = [
   { id:"mer29", short:"Mer", num:"29", month:"Aprile", fullName:"Mercoledì 29 Aprile", events:[
     {time:"19.00", icon:"food", title:"Apertura stand gastronomico", type:"food", link:"mangiare.html"},
-    {time:"20.15", icon:"kids", title:"Animazione con GLI AMICI DELL'ALLEGRIA di Formellino", subtitle:'"LA SFUIAREJA E... ALTRE SORPRESE"', type:"highlight"},
+    {time:"20.15", icon:"kids", title:"Animazione con GLI AMICI DELL'ALLEGRIA di Formellino", subtitle:'"LA SFUIAREJA E... ALTRE SORPRESE"', type:"highlight", link:"simple-events/amici-dell-allegria-formellino.html"},
     {time:"20.30", icon:"music", title:"Concerto della band MYSTIC DOLL", link:"simple-events/mystic-doll.html"}
   ]},
   { id:"gio30", short:"Gio", num:"30", month:"Aprile", fullName:"Giovedì 30 Aprile", events:[
@@ -30,7 +30,7 @@ const DAYS = [
     {time:"19.00", icon:"food", title:"Apertura stand gastronomico", type:"food", link:"mangiare.html"},
     {time:"20.00", icon:"trophy", title:"Premiazioni a tutte le Società partecipanti", subtitle:"(con minimo 10 partecipanti)", link:"podistica-campagna-map.html"},
     {time:"20.30", icon:"music", title:"Concerto di DANIELA PERONI QUARTET", link:"simple-events/daniela-peroni-quartet.html"},
-    {time:"22.30", icon:"fire", title:"LA FESTA DELLA LUCE", desc:"Acrobazie, Magie, Illusionismo e Giocoleria col FUOCO — presentato da COLLETTIVO STRA-VAGANTE", type:"highlight"},
+    {time:"22.30", icon:"fire", title:"LA FESTA DELLA LUCE", desc:"Acrobazie, Magie, Illusionismo e Giocoleria col FUOCO — presentato da COLLETTIVO STRA-VAGANTE", type:"highlight", link:"simple-events/festa-della-luce.html"},
     {time:"23.00", icon:"fire", title:"35° LOM A MAZ — ACCENSIONE DEL GRANDE FALÒ", desc:"BALLI ATTORNO AL FUOCO con il DUO TRABADELL ed il Gruppo di Ricerca ANTICHI BALLI · ASPETTANDO MEZZANOTTE E MAGGIO · VINO E CIAMBELLA PER TUTTI…", type:"highlight", link:"lom-a-maz.html"}
   ]},
   { id:"ven1", short:"Ven", num:"1", month:"Maggio", fullName:"Venerdì 1° Maggio", events:[
