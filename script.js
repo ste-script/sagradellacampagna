@@ -20,7 +20,7 @@ const IC = {
 const DAYS = [
   { id:"mer29", short:"Mer", num:"29", month:"Aprile", fullName:"Mercoledì 29 Aprile", events:[
     {time:"19.00", icon:"food", title:"Apertura stand gastronomico", type:"food", link:"mangiare.html"},
-    {time:"20.15", icon:"kids", title:"Animazione con GLI AMICI DELL'ALLEGRIA di Formellino", subtitle:'"LA SFUIAREJA E... ALTRE SORPRESE"', type:"highlight"},
+    {time:"20.15", icon:"kids", title:"Animazione con GLI AMICI DELL'ALLEGRIA di Formellino", subtitle:'"LA SFUIAREJA E... ALTRE SORPRESE"', type:"highlight", link:"simple-events/amici-dell-allegria-formellino.html"},
     {time:"20.30", icon:"music", title:"Concerto della band MYSTIC DOLL", link:"simple-events/mystic-doll.html"}
   ]},
   { id:"gio30", short:"Gio", num:"30", month:"Aprile", fullName:"Giovedì 30 Aprile", events:[
@@ -30,7 +30,7 @@ const DAYS = [
     {time:"19.00", icon:"food", title:"Apertura stand gastronomico", type:"food", link:"mangiare.html"},
     {time:"20.00", icon:"trophy", title:"Premiazioni a tutte le Società partecipanti", subtitle:"(con minimo 10 partecipanti)", link:"podistica-campagna-map.html"},
     {time:"20.30", icon:"music", title:"Concerto di DANIELA PERONI QUARTET", link:"simple-events/daniela-peroni-quartet.html"},
-    {time:"22.30", icon:"fire", title:"LA FESTA DELLA LUCE", desc:"Acrobazie, Magie, Illusionismo e Giocoleria col FUOCO — presentato da COLLETTIVO STRA-VAGANTE", type:"highlight"},
+    {time:"22.30", icon:"fire", title:"LA FESTA DELLA LUCE", desc:"Acrobazie, Magie, Illusionismo e Giocoleria col FUOCO — presentato da COLLETTIVO STRA-VAGANTE", type:"highlight", link:"simple-events/festa-della-luce.html"},
     {time:"23.00", icon:"fire", title:"35° LOM A MAZ — ACCENSIONE DEL GRANDE FALÒ", desc:"BALLI ATTORNO AL FUOCO con il DUO TRABADELL ed il Gruppo di Ricerca ANTICHI BALLI · ASPETTANDO MEZZANOTTE E MAGGIO · VINO E CIAMBELLA PER TUTTI…", type:"highlight", link:"lom-a-maz.html"}
   ]},
   { id:"ven1", short:"Ven", num:"1", month:"Maggio", fullName:"Venerdì 1° Maggio", events:[
@@ -52,20 +52,20 @@ const DAYS = [
     {time:"14.15", icon:"map", title:"PARTENZA del GIRO TURISTICO — Visita al MUSEO VAROLI di COTIGNOLA", link:"raduno-auto-moto.html"},
     {time:"18.30", icon:"food", title:"Apertura stand gastronomico", type:"food", link:"mangiare.html"},
     {time:"19.15", icon:"show", title:"ANDRO presenta SANTA CLOWN", subtitle:"Uno spettacolo comico e poetico", desc:"Nella lunga notte dei regali, lo spirito del Clown si sveglia ed osserva con meraviglia la propria stanza addobbata a festa", link:"simple-events/santa-clown.html"},
-    {time:"20.00", icon:"music", title:"LELINO E LA SUA GIUNTA BAND — concerto LÀSA STÉ", type:"highlight"},
-    {time:"21.30", icon:"music", title:"L'ORCHESTRA CORELLI — DREAMING MELODIES", subtitle:"Musiche dal magico mondo DISNEY", type:"highlight"},
-    {time:"23.00", icon:"dj", title:"DJ SET con NICOLAS PAGLIAI"}
+    {time:"20.00", icon:"music", title:"LELINO E LA SUA GIUNTA BAND — concerto LÀSA STÉ", type:"highlight", link:"simple-events/lelino-e-la-sua-giunta-band.html"},
+    {time:"21.30", icon:"music", title:"L'ORCHESTRA CORELLI — DREAMING MELODIES", subtitle:"Musiche dal magico mondo DISNEY", type:"highlight", link:"simple-events/orchestra-corelli-dreaming-melodies.html"},
+    {time:"23.00", icon:"dj", title:"DJ SET con NICOLAS PAGLIAI", link:"simple-events/nicolas-pagliai.html"}
   ]},
   { id:"dom3", short:"Dom", num:"3", month:"Maggio", fullName:"Domenica 3 Maggio", events:[
-    {time:"9.00", icon:"tractor", title:"4° SagriRADUNO — RADUNO DI TRATTORI D'EPOCA", subtitle:"Raduno ed esposizione di trattori e mezzi agricoli d'epoca", type:"highlight"},
+    {time:"9.00", icon:"tractor", title:"4° SagriRADUNO — RADUNO DI TRATTORI D'EPOCA", subtitle:"Raduno ed esposizione di trattori e mezzi agricoli d'epoca", type:"highlight", link:"simple-events/sagriraduno-trattori-epoca.html"},
     {time:"11.30", icon:"food", title:"Apertura stand gastronomico", type:"food", link:"mangiare.html"},
     {time:"14.30", icon:"music", title:"Concerto della band WORK IN PROGRESS", link:"simple-events/work-in-progress.html"},
     {time:"Pomeriggio", icon:"kids", title:"BUSKERS, ANIMAZIONI, GIOCOLERIA, TRUCCABIMBI — LAURA e i giochi di NONNO BANTER", link:"/angolo-dei-bambini.html"},
     {time:"14.30", icon:"horse", title:"HOBBY HORSES — 3° raduno degli ASINI con bastone", desc:"Con GARA di Asini a Bastone e carota e altre novità (ideazione artistica a cura di Luigi Berardi)", link:"simple-events/hobby-horses.html"},
     {time:"15.00", icon:"games", title:"GIOCHI DELLA TRADIZIONE POPOLARE ROMAGNOLA — 32° TORNEO DI BARANDELL", link:"barandell.html"},
     {time:"15.30", icon:"church", title:"Visita guidata alla Chiesa Arcipretale di Pieve Cesato", subtitle:"Guidata dall'Arciprete Don Claudio", link:"https://www.parrocchiapievecesato.it/"},
-    {time:"16.00", icon:"games", title:"Giochi a premi (area green) — GIMKANA COL TOSAERBA (gara a coppie)"},
-    {time:"17.30", icon:"kids", title:"CARLETTO E L'UOVO D'ORO — ALL'INCIRCO", subtitle:"Spettacolo di Burattini in baracca · Angolo dei Bambini", type:"highlight"},
+    {time:"16.00", icon:"games", title:"Giochi a premi (area green) — GIMKANA COL TOSAERBA (gara a coppie)", link:"simple-events/gimkana-col-tosaerba.html"},
+    {time:"17.30", icon:"kids", title:"CARLETTO E L'UOVO D'ORO — ALL'INCIRCO", subtitle:"Spettacolo di Burattini in baracca · Angolo dei Bambini", type:"highlight", link:"simple-events/carletto-e-l-uovo-d-oro.html"},
     {time:"18.00", icon:"food", title:"Apertura stand gastronomico", type:"food", link:"mangiare.html"},
     {time:"18.30", icon:"show", title:"VITTORIO BONETTI & ALFONSO NADIANI", subtitle:"T'È CUN AL TU CANZUNÈT, MÈ CUN I MÌ FET IN DIALÈT", link:"simple-events/vittorio-bonetti-alfonso-nadiani.html"},
     {time:"20.45", icon:"star", title:"SE STASERA SONO MINA — Tributo a Mina", subtitle:"I più grandi successi interpretati da Daniela Peroni", type:"highlight", link:"simple-events/se-stasera-sono-mina.html"}
